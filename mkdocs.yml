@@ -43,6 +43,7 @@ nav:
   - Work:
       - work/index.md
       - De-Clutter: work/DClutter.md
+      - Debug Site: work/debuysite.md
 
   - Story:
       - Story/index.md
