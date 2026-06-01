@@ -40,6 +40,10 @@ extra_css:
 nav:
   - Home: index.md
 
+  - Work:
+      - Work/index.md
+      - De-Clutter: work/DClutter.md
+
   - Story:
       - Story/index.md
       - Scenes 01-05: Story/CG01-05.md
