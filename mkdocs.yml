@@ -41,7 +41,7 @@ nav:
   - Home: index.md
 
   - Work:
-      - Work/index.md
+      - work/index.md
       - De-Clutter: work/DClutter.md
 
   - Story:
