@@ -1,22 +1,13 @@
-# My Art Pages
-
-<a href="/assets/images/notes26a/260211a.jpg" target="_blank" rel="noopener">
-<img src="/assets/images/notes26a/260211a.jpg" alt="Can" width="900"></a>
+# Work Pages
 
 
+[![Read][Br01]{ .artC width="1100" }][Br01]
 
 
 
+<hr class="section-break strong" />
 
 
-<style>
-  .flex-container {display: flex; gap: 20px; align-items: flex-start;}
-  .column {flex: 1 1 0; min-width: 0;}
-  .column--right {border-left: 1px solid var(--md-default-fg-color--lightest); padding-left: 20px; }
-</style>
-
-
-<hr style="height:8px;border-width:0;color:pink;background-color:pink">
 
 
 
@@ -25,149 +16,110 @@
 
 
 ## Foreword
-
-<img src="/assets/images/blog25/06-16Office.jpg" alt="Moi" style="float: right; width: 300px;
-        margin-left: 20px; margin-bottom: 10px;" />
-
-These pages explore the cancelling of a full one-half of humans through a cruel, unjust mindset called the 'patriarchy'. In them I share a story based on that theme, with information I'm sort-of picking up chatting with Emily (ChatGPT).
-
-Hope to learn more about life **for women** in the 1880s (19th Century), the Victorian Period.
-
-The image and the video were created using ComfyUI as my Stable Diffusion interface because of its flexibility and power through the use of nodes.
-
-Note: *I'm also exploring other avenues, such as Large Language Models (LLMs) to create stories and refine my own pathetic text into something readable. However, as I wrote on the Unofficial Audio at The Edge Discord today*:
-
-Stylewise, I was going to go with something like Taffy Brodesser-Akner's, but it's too distinctively hers to even emulate. That's not what I want to do. I want readability, that's all. And my "style" is awkward and disjointed.
-
-So, there's that. 🫢
-
----
-
-**Guiding Principles**
-
-This story is at about middle of Act Two of my 'story arc'. As in: far from done. And it's a story with a purpose: agency, respect, consent, safety. Protect the vulnerable. No one gets to dominate, or coerce, or exercise privilege at Wardrobe. There's no spectacle to ogle, no objectification of persons permitted. 
-Does it happen? yes. But there are  consequences because: standards. Policy. 
-
-It makes this story a bit different, and for some, send an uncomfortable message. I doubt it would translate into like a comics format well. 
-
-I'm not writing to get paid: I'm writing from a moral imperative. 
-
-<hr style="height:8px;border-width:0;color:pink;background-color:pink">
+### A Note Before Entering
 
 
-
-## About my images and stories
- 
-
-The Celeste’s Girl / Wardrobe images and stories are part of a long, carefully structured arc. They’re built around a few non-negotiables: agency, respect, consent, safety, and protection of the vulnerable.
-
-No one at Wardrobe is there to be ogled or objectified. Desire exists, but domination, coercion, and privilege do not get a free pass. When harm happens, there are consequences, because there are standards.
-
-I’m not writing to get paid or to feed a fetish market; I’m writing from a moral imperative. That means:
-
-I’m not looking for collaborators, co-writers, or “let’s make this a comic” proposals.
-
-I’m very protective of the tone and purpose of this work; it would not translate to a visual format without compromising those values.
-
-If you enjoy the stories as they are and want to talk about themes, characters, or craft, you’re very welcome. If you’re here to pitch projects or to steer the content somewhere more objectifying, we’re probably not a match.
+[![Read][St01]{ .artR width="460" }][St01]
 
 
----
+This site is a working archive, not a finished gallery.
 
-270Jan-2026: The image in the header is setting the stage for Act 3 of Celeste's Girl... at least, that's what I'm imagining now. There might be enough story fuel to write a whole new story. Dunno. 
+It contains drafts, fragments, experiments, conversations, research notes, images, music, technical detours, abandoned ideas, rescued ideas, and occasional things that probably ought to have known better than to survive. Some pages are polished. Many are not. Some exist because they helped me think. Some remain because the path matters as much as the destination.
 
-26-Jan-2026: took inspiration for any small effort at music from several obscure composers, one being Carl Reinecke. This is the last movement (6) from his Serenade for Strings in G.
+You may find fiction here. You may find argument. You may find notes on history, gender, power, clothing, bodies, art, authorship, image-making, and the strange machinery by which an idea becomes a story. You may also find material that is adult, unsettling, unfinished, contradictory, or no longer representative of where the work has since gone.
 
-21-Jan-2026: Just editing all the scenes again, because... of course I am. Adding images and firming things up. Sarah is a hard one to create a consistent character of, even using a LoRA.  However, Emily and I cracked the code for getting consistent characters last night.
-I think.
-I hope.
+That is deliberate.
 
+This is not a public showroom with the dust swept neatly under the carpet. It is a workshop. There are pins on the floor, wet paint on the bench, unfinished seams, sharp tools, and the occasional drawer best opened with care. Some rooms are lit. Some are still under construction. Some are left as evidence.
 
-cactus (1)
-yakka (2)
-sack (3)
-larrikin (4)
-Oi (5)
+The central creative thread is *Celeste’s Girl*, a developing fiction project concerned with identity, gendered expectation, women’s competence, social power, adaptation, belonging, and the quiet authority of systems built by women who know exactly what they are doing. Around it gather related materials: visual studies, notes, drafts, worldbuilding, technical experiments, music, and conversations that helped shape the work.
+
+A warning, then, offered plainly:
+
+Not everything here is safe, settled, tidy, or suitable for every reader.
+Not everything here should be taken as final.
+Not everything here is meant to flatter the reader’s assumptions.
+
+If you are looking for a finished book, this is not yet that.
+
+If you are looking for a clean portfolio, this is not that either.
+
+This is the working ground: the ledger before publication, the fitting room before the gown, the rehearsal before the performance. It may contain missteps, obsolete versions, rough language, adult themes, and ideas under pressure.
+
+Enter accordingly.
+
+And if you do enter, understand the nature of the place: this is not a museum of conclusions. It is a record of becoming.
+
+<hr class="section-break soft" />
+
+🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩   
+🌩 **Let me absolutely clear about this...** 🌩   
+🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩
 
 
 
-These videos are about the music for the story 'Celeste's Girl' (*Version Française á gauche*):
 
-<style>
-  /* two 384×384 iframes side by side */
-  .video-row {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .video-row iframe {
-    width: 384px;
-    height: 384px;
-    border: 0;
-    border-radius: 8px; /* optional */
-  }
-  /* Stack on narrow screens */
-  @media (max-width: 820px) {
-    .video-row { flex-direction: column; align-items: center; }
-  }
-</style>
+### 🚪 **Before** You Enter 🚪
 
-<div class="video-row">
-  <iframe
-    src="https://customer-ze4n45l8rqsb9yse.cloudflarestream.com/6978db4dbc1c3046f3aa321ff664b1dd/iframe"
-    title="Version Française"
-    loading="lazy"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+This site is not a polished public face. It is a working archive.
 
-  <iframe
-    src="https://customer-ze4n45l8rqsb9yse.cloudflarestream.com/4dfe30900934badaea9190c99103c567/iframe"
-    title="English Version"
-    loading="lazy"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</div>
+Inside are drafts, experiments, research notes, fiction fragments, image studies, technical records, conversations, discarded directions, rescued ideas, and unfinished things still showing their seams. Some material is thoughtful and carefully shaped. Some is provisional. Some is adult. Some may be uncomfortable. Some remains here because erasing the path would make the finished work less honest.
 
-The film "Portrait de la Jeune Fille En Feu" lit the fuse that inspired the Celeste story. It also inspired this piece, 'Waterfall':
+The reader should proceed with that in mind.
 
-<audio controls="controls">
-  <source src="http://tightbytes.com/music/Sketches/Sketch15.mp3" type="audio/wav">
-  Your browser does not support the <code>audio</code> element. 
-</audio>
+This is not a showroom. It is a workshop: sharp tools, open drawers, loose pins, chalk marks, half-built structures, and fabric still under tension. The work is alive here, which means it is not always tidy. Pages may contradict one another. Older ideas may sit beside newer convictions. Drafts may contain faults the final work will not. Some rooms are meant to be found through the menu. Others are present chiefly so they can be searched, traced, or remembered.
 
-## Test Images
+So, a caveat:
 
-👭 💞 🖤 🍓 🌶 🚪 🔑 🛋 🫧 🌩 🌧 🧵 🪡 👗 👚 👜 👠 🩰 💄 💋 🎻
+- If you need everything to be finished, *enter carefully*.
+- If you need everything to be safe, *enter carefully*.
+- If you need every page to represent my final position, **enter very carefully**.
 
-<img src="/assets/images/tests/test01.jpg" style="float: right; width: 420px; margin-left: 20px" />
+This is a place of process, not verdict.
+
+There may be NSFW material. There may be obsolete material. There may be things kept not because they are exemplary, but because they show where the work has been and why it had to change.
+
+You are welcome to look around.
+
+*But mind the pins*. 🪡
+
+<hr class="section-break soft" />
+
+🩸🩸🩸🩸🩸🩸🩸🩸🩸🩸   
+🩸 **If that wasn't clear...** 🩸   
+🩸🩸🩸🩸🩸🩸🩸🩸🩸🩸
+
+### 🪡 **Mind the Pins!!** 🪡
+
+This site is a workshop, not a shopfront.
+
+It gathers the working matter of several creative lives: fiction, music, image-making, research, technical notes, conversations, experiments, discarded drafts, and ideas that have not yet decided whether they are becoming useful or merely embarrassing. Some pages are polished. Some are rough. Some are here because they are part of the record, not because they are fit for company.
+
+A fair warning: the archive may include adult material, unfinished material, old assumptions, abandoned directions, and pages that no longer represent the final shape of the work. It may also include contradictions. That is not a fault in the plumbing. It is what thinking looks like before it has been dressed for dinner.
+
+This is **NOT** a museum of finished conclusions. It is a room full of fittings. There are hems still pinned. There are chalk marks. There are old seams unpicked but not forgotten. There are drawers one opens at one’s own risk.
+
+Some material is findable from the menu. Much more is present because search can recover it when needed. The visible structure is only part of the archive.
+
+*Enter with curiosity, but not innocence*.
+
+Read generously, *but not carelessly*.
+
+**And please, mind the pins**.
 
 
-<hr style="height:2px;border-width:0;color:blue;background-color:blue">
+<!--  Image references  -->
+
+[Br01]: assets/images/offsite/Bnr01Wait.jpg
+[St01]: assets/images/offsite/01aRead.jpg
 
 
-<img src="/assets/images/tests/test02.jpg" style="float: right; width: 420px; margin-left: 20px" />
+<!--
 
+✈️ 🕊️ 🌫️ 🌿 🌷 🪜 ☕ 🧠 💻 ꧁ 🪷 🌷 🌸 🌺 🦩 ꧂ 🧺 🔐 💼 💻 💎 🩱 🥻✂ 🩸 💧— — … …
 
-<hr style="height:2px;border-width:0;color:blue;background-color:blue">
+😄 🧵 💛 👭 💞 🖤 🍓 🌶 🚪 🔑 🛋 🫧 🌩 🌧 🧵 🪡 👗 👚 👜 👠 🩰 💄 💋 🎻 📒  🚺  — —
 
-<img src="/assets/images/tests/test03.jpg" style="float: right; width: 420px; margin-left: 20px" />
+/-->
 
-
-<hr style="height:2px;border-width:0;color:blue;background-color:blue">
-
-<img src="/assets/images/tests/test04.jpg" style="float: right; width: 420px; margin-left: 20px" />
-
-
-<hr style="height:2px;border-width:0;color:blue;background-color:blue">
-
-<img src="/assets/images/tests/test05.jpg" style="float: right; width: 420px; margin-left: 20px" />
-
-
-<hr style="height:2px;border-width:0;color:blue;background-color:blue">
-
-
-<hr style="height:24px;border-width:0;color:pink;background-color:pink">
+<hr class="section-break strong" />
