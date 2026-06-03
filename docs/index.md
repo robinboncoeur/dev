@@ -52,12 +52,16 @@ And if you do enter, understand the nature of the place: this is not a museum of
 
 <hr class="section-break soft" />
 
+
+
+[![L'Embrasse][Nu01]{ .artR width="460" }][Nu01]
+
+
+
+
 🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩   
 🌩 **Let me absolutely clear about this...** 🌩   
 🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩🌩
-
-
-
 
 ### 🚪 **Before** You Enter 🚪
 
@@ -84,6 +88,11 @@ You are welcome to look around.
 *But mind the pins*. 🪡
 
 <hr class="section-break soft" />
+
+
+
+[![Self-study][Nu02]{ .artR width="460" }][Nu02]
+
 
 🩸🩸🩸🩸🩸🩸🩸🩸🩸🩸   
 🩸 **If that wasn't clear...** 🩸   
@@ -112,6 +121,8 @@ Read generously, *but not carelessly*.
 
 [Br01]: assets/images/offsite/Bnr01Wait.jpg
 [St01]: assets/images/offsite/01aRead.jpg
+[Nu01]: https://media.seabrae.org/images/e/Qaio001.jpg
+[Nu02]: https://media.seabrae.org/images/e/Qnu001.jpg
 
 
 <!--
