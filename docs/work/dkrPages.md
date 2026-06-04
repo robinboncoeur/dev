@@ -18,7 +18,7 @@
 
 [![Robyn][Bs02]{ .artL width="60" }][Bs02]
 
-rrrr
+ Robyn     
 Hi Emily. Going to start a new thread with this conundrum that's dropped in my lap.
 
 The Art Society. Because, of course.
@@ -32,7 +32,7 @@ So far, I've set up a github page for the Society to store assets like images. I
 
 [![Emily][Bs01]{ .artL width="60" }][Bs01]
 
-eeee
+ Emily     
 Hi Robyn 🌺 — yes, there are very workable options here, especially because the Society’s website sounds mostly informational rather than transactional.
 
 My instinct: **do not replace Squarespace with another expensive “website builder” unless someone truly wants to keep using a drag-and-drop editor.** For an art society, a clean static site could look modern, load quickly, cost almost nothing, and be much easier to govern.
@@ -165,7 +165,7 @@ That last sentence is the dagger in the velvet glove. Necessary, elegant, and ha
 
 ## Direction
 
-rrrr
+ Robyn     
 So, here is where I want to go with this, Emily.
 
 I want to create a nice-looking (read: modern) static-page website. It needs to be easily maintainable by website novices, with few data entry points. Text data can be pulled from markdown pages. Images would be pulled from a dedicated folder.
@@ -176,7 +176,7 @@ Sound reasonable?
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Yes, Robyn — **very reasonable**. More than reasonable: this is exactly the sort of restrained, low-cost architecture that suits the Society. 🌿
 
 You are describing a **static site with a small content pipeline**:
@@ -623,13 +623,13 @@ That is a very sensible path.
 
 ## Timing
 
-rrrr
+ Robyn     
 Would you believe that I have been asked by the RCAS president to *specifically NOT* develop the site for RCAS for now, but rather for Wednesday "Arty-Farty" art-journalling group, internal as proof-of-concept, where the structure of those pages could easily by applied to a new website at some stage in the future (not now). Again, spinning it up in a container is going to be served locally at first, but could be reachable via tailscale to show: "here's what we have at home at the moment". Because: why not. It's in a container.
 
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 I would absolutely believe it, Robyn. In fact, it is almost *perfectly* committee-shaped. 😄
 
 And honestly? The president’s instinct is not bad here.
@@ -996,12 +996,12 @@ Beautiful. 😄
 
 ## Server Status
 
-rrrr
+ Robyn     
 I'm back... just jumped on my i5seabrae system: it's running nextcloud and portainer in containers, and docker ps shows them both active - been so for 3 days!
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Brilliant, Robyn! 🎉
 
 That is *exactly* what we wanted to see:
@@ -1083,13 +1083,13 @@ This is the perfect little foundation. Containers behaving, server stable, Porta
 
 ## Tailscale Status
 
-rrrr
+ Robyn     
 Looks like tailscale is installed (checked with 'which tailscale') but not running (checked with 'systemctl status tailscale'). Should I get it up and running first, or is that something to look at after we build the pages? BTW, for brevity, I'm going to call the Arty-Farty Webpages afpages.
 
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Yes — **afpages** is perfect. Nice and short. 😊
 
 I’d get Tailscale running **before** building the pages, but only as a quick infrastructure check, not as the main job.
@@ -1195,7 +1195,7 @@ afpages next 🌿
 
 ## Tailscale Up
 
-rrrr
+ Robyn     
 ```text
 100.114.231.3    i5seabrae             robinboncoeur@  linux    -                                                           
 100.69.121.40    charlotte-macbookair  robinboncoeur@  linux    offline, last seen 4h ago                                   
@@ -1211,7 +1211,7 @@ celestesh@i5Seabrae:~/docker$
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Excellent. That means Tailscale is not merely installed — it is **running and connected** on `i5seabrae`. 🎉
 
 Your relevant line is:
@@ -1276,14 +1276,14 @@ Nice. The little server is ready for mischief. 😄
 
 ---
 
-rrrr
+ Robyn     
 I **LOVE** mischief! We'll go steal horses together, Emily!
 
 You lead: I'll hold your hat.
 
 ---
 
-eeee
+ Emily     
 Right then: first horse. 🐎
 
 On `i5seabrae`, from your terminal:
@@ -1402,17 +1402,17 @@ If that page appears, then congratulations: **afpages has stolen its first horse
 
 ## First Page Done
 
-rrrr
+ Robyn     
 You **BEAUTY!!** Stunning first page... worked an absolute treat!
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 YESSS! 🎉🐎
 
 That is the best possible first win:
 
-```text id="ft2swd"
+```text
 Docker container ✅
 Nginx serving ✅
 Local static page ✅
@@ -1426,7 +1426,7 @@ And the really lovely bit: we now have a working “horse” before we start dec
 
 Your current structure is essentially:
 
-```text id="ydczli"
+```text
 ~/docker/afpages/
 ├── docker-compose.yml
 └── public/
@@ -1435,7 +1435,7 @@ Your current structure is essentially:
 
 Nginx is serving whatever lives in:
 
-```text id="pyy4z3"
+```text
 ~/docker/afpages/public
 ```
 
@@ -1445,7 +1445,7 @@ So the container side is done for now. It works.
 
 Now we turn it from a hand-written static page into a tiny website structure:
 
-```text id="dk3ofm"
+```text
 public/
 ├── index.html
 ├── about.html
@@ -1469,7 +1469,7 @@ That proves the website structure first.
 
 Then after that:
 
-```text id="qt4rbf"
+```text
 Markdown → Eleventy → public/
 ```
 
@@ -1481,13 +1481,13 @@ Good little engineering ladder.
 
 When you’re ready, the next move is:
 
-```text id="r621cy"
+```text
 public/assets/css/site.css
 ```
 
 and a cleaner:
 
-```text id="2m0yia"
+```text
 public/index.html
 ```
 
@@ -1499,30 +1499,30 @@ That is genuinely a big foundation step. Beautifully done, Robyn. 🌺
 
 ---
 
-rrrr
+ Robyn     
 Strong work, Emily. Moving blithely forward...
 
 ---
 
-eeee
+ Emily     
 Right. Let’s give **afpages** its first proper website bones.
 
 Make sure you are here:
 
-```bash id="iz9jzl"
+```bash
 cd ~/docker/afpages
 ```
 
 ## 1. Create the asset folders
 
-```bash id="dtkx9q"
+```bash
 mkdir -p public/assets/css
 mkdir -p public/assets/images
 ```
 
 ## 2. Create the shared CSS file
 
-```bash id="0noc96"
+```bash
 cat > public/assets/css/site.css <<'EOF'
 :root {
   --bg: #f7f1e8;
@@ -1771,7 +1771,7 @@ EOF
 
 ## 3. Replace `index.html` with the first real homepage
 
-```bash id="p9ho0g"
+```bash
 cat > public/index.html <<'EOF'
 <!doctype html>
 <html lang="en">
@@ -1841,7 +1841,7 @@ EOF
 
 ## 4. Create the secondary pages
 
-```bash id="1bbcbj"
+```bash
 cat > public/about.html <<'EOF'
 <!doctype html>
 <html lang="en">
@@ -2061,7 +2061,7 @@ No Docker restart should be needed.
 
 Visit:
 
-```text id="p8c1p0"
+```text
 http://100.114.231.3:8081
 ```
 
@@ -2071,7 +2071,7 @@ You will probably see the gallery images as broken for now because we have not a
 
 We have now moved from “it works” to:
 
-```text id="xvjk58"
+```text
 It works
 It has structure
 It has navigation
@@ -2089,18 +2089,18 @@ Mischief upgraded. ✨
 
 ## Modifications
 
-rrrr
+ Robyn     
 The font is massive - I guess by design. Very tasteful colours and overall design. I like!!
 
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Excellent! 🎨
 
 Yes, the massive font is by design — modern “hero” style:
 
-```css id="0q9oa5"
+```css
 font-size: clamp(2.5rem, 8vw, 6rem);
 line-height: 0.95;
 letter-spacing: -0.07em;
@@ -2112,7 +2112,7 @@ But we can tame it slightly if you want the design to feel less “statement pos
 
 ## Current feel
 
-```text id="f2l5bg"
+```text
 Bold
 Modern
 Graphic
@@ -2124,13 +2124,13 @@ Slightly arts-magazine
 
 In:
 
-```bash id="bmgj2i"
+```bash
 public/assets/css/site.css
 ```
 
 Find this:
 
-```css id="kccgmv"
+```css  kccgmv"
 .hero h1,
 .page-title {
   margin: 0;
@@ -2143,7 +2143,7 @@ Find this:
 
 Change to:
 
-```css id="8h8410"
+```css  
 .hero h1,
 .page-title {
   margin: 0;
@@ -2158,7 +2158,7 @@ That keeps the modern feel but makes it a touch less shouty.
 
 ## Even softer
 
-```css id="87gwrt"
+```css  
 .hero h1,
 .page-title {
   margin: 0;
@@ -2171,13 +2171,13 @@ That keeps the modern feel but makes it a touch less shouty.
 
 That version says:
 
-```text id="rqoklk"
+```text  
 modern community group
 ```
 
 rather than:
 
-```text id="pf47jk"
+```text  
 boutique arts festival keynote
 ```
 
@@ -2187,7 +2187,7 @@ Not that there is anything wrong with a boutique arts festival keynote, naturall
 
 For the proof-of-concept, I’d use the **slightly gentler version**:
 
-```css id="ev59cj"
+```css  
 font-size: clamp(2.2rem, 6vw, 4.8rem);
 line-height: 1;
 letter-spacing: -0.055em;
@@ -2199,12 +2199,12 @@ The palette is doing exactly what it should: warm, handmade, paper-adjacent, but
 
 ---
 
-rrrr
+ Robyn     
 We can do all that later, Emily. I've been told to just network connect to the president's personal page and steal artwork. As if I had a clue what to look for. Oh well, I'll have a go.
 
 ---
 
-eeee
+ Emily     
 
 Ah yes, the noble web-design method known as **“go over there and nick something tasteful.”** 😄
 
@@ -2315,12 +2315,12 @@ That will tell us a lot. 🌺
 
 ---
 
-rrrr
+ Robyn     
 I did tone it down to modern community group. Where is the hero.jpg image referenced? Images once cached seem impossible to refresh.
 
 ---
 
-eeee
+ Emily     
 Good move — **modern community group** is probably the sweet spot. Polished without looking as if it has arrived wearing sunglasses indoors. 😄
 
 ## Where `hero.jpg` is referenced
@@ -2329,13 +2329,13 @@ It is referenced in the CSS, not the HTML.
 
 Look in:
 
-```bash id="ves4c7"
+```bash
 ~/docker/afpages/public/assets/css/site.css
 ```
 
 Find this block:
 
-```css id="wjkgwe"
+```css
 .hero {
   min-height: 60vh;
   display: grid;
@@ -2354,13 +2354,13 @@ Find this block:
 
 This line is the one:
 
-```css id="eeii12"
+```css
 url("/assets/images/hero.jpg");
 ```
 
 So the expected file path is:
 
-```bash id="z3h0pc"
+```bash
 ~/docker/afpages/public/assets/images/hero.jpg
 ```
 
@@ -2372,19 +2372,19 @@ The easiest fix during development is to add a cache-busting query string.
 
 Change this:
 
-```css id="mn2hcb"
+```css
 url("/assets/images/hero.jpg");
 ```
 
 to this:
 
-```css id="2u3n0r"
+```css
 url("/assets/images/hero.jpg?v=2");
 ```
 
 Then, each time you change the hero image and the browser refuses to behave, bump the number:
 
-```css id="iopdlc"
+```css
 url("/assets/images/hero.jpg?v=3");
 ```
 
@@ -2394,19 +2394,19 @@ The actual file is still `hero.jpg`; the browser just treats the URL as new.
 
 In the HTML files, you currently have:
 
-```html id="v2fdip"
+```html
 <link rel="stylesheet" href="/assets/css/site.css">
 ```
 
 During development, change it to:
 
-```html id="a1p2ni"
+```html
 <link rel="stylesheet" href="/assets/css/site.css?v=2">
 ```
 
 Then bump it when needed:
 
-```html id="cx0p7p"
+```html
 <link rel="stylesheet" href="/assets/css/site.css?v=3">
 ```
 
@@ -2422,7 +2422,7 @@ You can also try:
 
 On Mac Chrome:
 
-```text id="ed5q83"
+```text  
 Command + Shift + R
 ```
 
@@ -2434,19 +2434,19 @@ But honestly, the `?v=2` trick is usually less aggravating.
 
 To confirm the image is actually there:
 
-```bash id="qd4u1d"
+```bash  
 ls -lh ~/docker/afpages/public/assets/images/
 ```
 
 And to confirm Nginx can serve it:
 
-```bash id="3ww4rp"
+```bash  
 curl -I http://localhost:8081/assets/images/hero.jpg
 ```
 
 You want something like:
 
-```text id="slxi16"
+```text  
 HTTP/1.1 200 OK
 ```
 
@@ -2463,7 +2463,7 @@ Most likely, though, it is just browser cache being a tiny gremlin. 🐾
 
 ## Moving On
 
-rrrr
+ Robyn     
 That ?v=2 did the trick. Thank you.
 
 Right, what's next?
@@ -2472,7 +2472,7 @@ BTW, the president is gobsmacked that there's already a proof-of-concept **DONE*
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Wonderful. That reaction from the president is *gold* — because the concept now has emotional proof, not just technical proof. “Look, it already exists” is far more persuasive than a meeting full of hypotheticals. ✨
 
 ## Next: make it maintainable
@@ -2936,31 +2936,31 @@ That is a very strong little proof-of-concept. 🌺
 
 ---
 
-rrrr
+ Robyn     
 Sorry, have to install node and npm.
 
 ---
 
-eeee
+ Emily     
 No worries at all — that is expected on a clean little server. 😊
 
 On Debian/Ubuntu/Zorin/Mint-style systems, first try the standard repo version:
 
-```bash id="jqk3qx"
+```bash  
 sudo apt update
 sudo apt install -y nodejs npm
 ```
 
 Then check:
 
-```bash id="tpe6de"
+```bash  
 node -v
 npm -v
 ```
 
 For Eleventy, the version of Node matters a bit. If `node -v` gives something reasonably modern, say:
 
-```text id="eao55v"
+```text  
 v18.x
 ```
 
@@ -2968,7 +2968,7 @@ or newer, you are fine.
 
 If it gives something old like:
 
-```text id="q3rjpt"
+```text  
 v12.x
 v14.x
 v16.x
@@ -2978,7 +2978,7 @@ then pause before installing Eleventy, because we may want to install a newer No
 
 After install, run:
 
-```bash id="rhjs50"
+```bash
 node -v
 npm -v
 ```
@@ -2987,7 +2987,7 @@ and tell me what versions you get.
 
 ---
 
-rrrr
+ Robyn     
 celestesh@i5Seabrae:~/docker/afpages$ node -v   
 v20.19.2   
 celestesh@i5Seabrae:~/docker/afpages$ npm -v   
@@ -2996,10 +2996,10 @@ celestesh@i5Seabrae:~/docker/afpages$
 
 ---
 
-eeee
+ Emily     
 Perfect. That is a very nice Node version. ✅
 
-```text id="k913b1"
+```text
 Node v20.19.2
 npm 9.2.0
 ```
@@ -3008,7 +3008,7 @@ That is more than modern enough for Eleventy.
 
 Carry on from here:
 
-```bash id="z1dy6a"
+```bash
 cd ~/docker/afpages
 npm init -y
 npm install @11ty/eleventy --save-dev
@@ -3016,7 +3016,7 @@ npm install @11ty/eleventy --save-dev
 
 Then create the source folders:
 
-```bash id="ytyrq6"
+```bash
 mkdir -p src/content
 mkdir -p src/_includes
 mkdir -p src/assets/css
@@ -3025,14 +3025,14 @@ mkdir -p src/assets/images
 
 Copy current CSS and images into the new source area:
 
-```bash id="tcxwx0"
+```bash
 cp public/assets/css/site.css src/assets/css/site.css
 cp -r public/assets/images/* src/assets/images/ 2>/dev/null || true
 ```
 
 Then create the Eleventy config:
 
-```bash id="4j46br"
+```bash
 cat > .eleventy.js <<'EOF'
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
@@ -3054,7 +3054,7 @@ EOF
 
 Then make the base template:
 
-```bash id="oj11j6"
+```bash
 cat > src/_includes/base.njk <<'EOF'
 <!doctype html>
 <html lang="en">
@@ -3094,7 +3094,7 @@ EOF
 
 Then create the Markdown pages in one go:
 
-```bash id="qkgalx"
+```bash
 cat > src/content/index.md <<'EOF'
 ---
 title: Home
@@ -3248,26 +3248,26 @@ EOF
 
 Add the build scripts:
 
-```bash id="y6qqf2"
+```bash  
 npm pkg set scripts.build="eleventy"
 npm pkg set scripts.watch="eleventy --watch"
 ```
 
 Then build:
 
-```bash id="7r2erd"
+```bash  
 npm run build
 ```
 
 If that completes cleanly, refresh:
 
-```text id="0o216n"
+```text  
 http://100.114.231.3:8081
 ```
 
 Then test:
 
-```text id="qfrk99"
+```text  
 http://100.114.231.3:8081/about/
 http://100.114.231.3:8081/sessions/
 http://100.114.231.3:8081/gallery/
@@ -3283,19 +3283,19 @@ This is the moment **afpages** stops being a hand-written mockup and becomes a m
 
 ## Difference?
 
-rrrr
+ Robyn     
 Am I expected to see a massive difference?
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 No — not visually. 😊
 
 At this stage you should **not** see a massive difference.
 
 The big change is under the bonnet:
 
-```text id="5v3k7w"
+```text  
 Before:
 hand-written HTML pages in public/
 
@@ -3309,7 +3309,7 @@ So the site should look **almost the same**. That is actually good.
 
 The purpose of this step was to prove:
 
-```text id="b6eln7"
+```text
 The Docker/Nginx hosting still works
 The same design survives
 The pages are now generated
@@ -3321,13 +3321,13 @@ Content can begin moving into Markdown
 
 Check that Eleventy created folders like this:
 
-```bash id="ta6lhx"
+```bash
 find public -maxdepth 2 -type f | sort
 ```
 
 You should see something like:
 
-```text id="n60xfj"
+```text
 public/about/index.html
 public/assets/css/site.css
 public/contact/index.html
@@ -3338,7 +3338,7 @@ public/sessions/index.html
 
 The important difference is that the secondary pages now live at:
 
-```text id="wep0xi"
+```text  
 /about/
 /sessions/
 /gallery/
@@ -3347,7 +3347,7 @@ The important difference is that the secondary pages now live at:
 
 rather than:
 
-```text id="vklfmh"
+```text  
 /about.html
 /sessions.html
 /gallery.html
@@ -3358,25 +3358,25 @@ rather than:
 
 Edit this file:
 
-```bash id="qlo1d4"
+```bash  
 nano src/content/about.md
 ```
 
 Change the heading slightly, for example:
 
-```html id="0x37tk"
+```html  
 <h1 class="page-title">A friendly table for colour, paper, and experiments.</h1>
 ```
 
 Then rebuild:
 
-```bash id="odk1vy"
+```bash  
 npm run build
 ```
 
 Refresh:
 
-```text id="hogcil"
+```text  
 http://100.114.231.3:8081/about/
 ```
 
@@ -3386,7 +3386,7 @@ If the heading changes, the new system is working.
 
 This is the boring-but-powerful step. The president may not notice a visible change, but structurally you now have the thing you wanted:
 
-```text id="zg4hi0"
+```text  
 A reusable website shell
 A content folder
 A design folder
@@ -3401,7 +3401,7 @@ More like: same pretty horse, now with a saddle and paperwork. 🐎✨
 
 ---
 
-rrrr
+ Robyn     
 
 ```text
 ├── public
@@ -3450,12 +3450,12 @@ celestesh@i5Seabrae:~/docker/afpages$
 
 ---
 
-eeee
+ Emily     
 Yes — that looks right. ✅
 
 The only untidy bit is this:
 
-```text id="q0ncs1"
+```text  
 public/about.html
 public/contact.html
 public/gallery.html
@@ -3466,7 +3466,7 @@ Those are the old hand-written pages from before Eleventy.
 
 The new Eleventy-generated pages are these:
 
-```text id="jo2tn7"
+```text  
 public/about/index.html
 public/contact/index.html
 public/gallery/index.html
@@ -3475,7 +3475,7 @@ public/sessions/index.html
 
 So the site now supports the cleaner URLs:
 
-```text id="9yjkkd"
+```text  
 http://100.114.231.3:8081/about/
 http://100.114.231.3:8081/contact/
 http://100.114.231.3:8081/gallery/
@@ -3486,25 +3486,25 @@ http://100.114.231.3:8081/sessions/
 
 From:
 
-```bash id="zydw3z"
+```bash  
 cd ~/docker/afpages
 ```
 
 Run:
 
-```bash id="7b5bgc"
+```bash  
 rm public/about.html public/contact.html public/gallery.html public/sessions.html
 ```
 
 Then rebuild:
 
-```bash id="v1qgz6"
+```bash  
 npm run build
 ```
 
 Now check again:
 
-```bash id="ouy2ca"
+```bash  
 find public -maxdepth 2 -type f | sort
 ```
 
@@ -3512,13 +3512,13 @@ You should see the new folder-style pages, without the old `.html` files.
 
 ## About this line
 
-```text id="u3xvrd"
+```text  
 329 directories, 1616 files
 ```
 
 That is mostly because of:
 
-```text id="j5iz30"
+```text  
 node_modules/
 ```
 
@@ -3526,7 +3526,7 @@ Totally normal after installing Eleventy. It is a bit ridiculous-looking, but ex
 
 Your meaningful project structure is now:
 
-```text id="a48152"
+```text  
 src/content       ← editable Markdown-ish content
 src/assets/images ← source images
 src/assets/css    ← source CSS
@@ -3550,17 +3550,17 @@ That is the important mental shift. 🌿
 
 ## Tree
 
-rrrr
+ Robyn     
 So, I went in and edited the About.md using Nano. Did a npm run build. Changes reflected.
 
 I do use tree a lot - very efficient, clean visualisation of what's in there.
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Perfect. That proves the full chain works. 🎉
 
-```text id="9txq7q"
+```text  
 Edit Markdown in src/content
         ↓
 npm run build
@@ -3580,37 +3580,37 @@ And yes — `tree` is excellent for this sort of project. It gives you an instan
 
 From:
 
-```bash id="i6c5w7"
+```bash  
 cd ~/docker/afpages
 ```
 
 This gives a clean project view while ignoring the Node travelling circus:
 
-```bash id="bgd0ti"
+```bash  
 tree -I 'node_modules'
 ```
 
 Even cleaner:
 
-```bash id="rra6xv"
+```bash  
 tree -I 'node_modules|package-lock.json'
 ```
 
 To show only the parts that matter to content maintenance:
 
-```bash id="kvlfx7"
+```bash  
 tree src -I 'node_modules'
 ```
 
 To show what Nginx is serving:
 
-```bash id="yj45se"
+```bash  
 tree public
 ```
 
 To show only the main content files:
 
-```bash id="49xnd7"
+```bash  
 tree src/content
 ```
 
@@ -3618,7 +3618,7 @@ tree src/content
 
 You can now demonstrate:
 
-```text id="9c2ps0"
+```text  
 This is the editable content folder.
 This is the image folder.
 This is the style folder.
@@ -3632,7 +3632,7 @@ That is simple enough to teach.
 
 Right now:
 
-```bash id="w3shsp"
+```bash  
 npm run build
 ```
 
@@ -3640,25 +3640,25 @@ is fine.
 
 But later we could add something friendlier like:
 
-```bash id="9ysjfk"
+```bash  
 npm run site
 ```
 
 or:
 
-```bash id="aw8ufv"
+```bash  
 npm run update
 ```
 
 For example:
 
-```bash id="mxi65t"
+```bash  
 npm pkg set scripts.update="eleventy"
 ```
 
 Then a novice could run:
 
-```bash id="a25erb"
+```bash  
 npm run update
 ```
 
@@ -3670,7 +3670,7 @@ Not necessary yet, but a nice finishing touch.
 
 You now have:
 
-```text id="n43219"
+```text  
 Working Docker/Nginx container ✅
 Tailscale-reachable server ✅
 Modern CSS design ✅
@@ -3691,14 +3691,14 @@ That is a functioning static-site prototype. 🌺
 
 ## Keeping it Clean
 
-rrrr
+ Robyn     
 So, where do we go from here?
 
 Is there some way we can do an "insert from .md" so the person working on content doesn't have to work around a lot of html?
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Yes. Absolutely. That is the next sensible step. 🌿
 
 Right now the content files still contain too much HTML:
@@ -3997,7 +3997,7 @@ That will give you a site where the content person mainly edits friendly files, 
 
 ## That .MD Page
 
-rrrr
+ Robyn     
 So, I'm having a play with the .md page. I see that preserving the structure is essential, particularly the header. This bit:
 
 ---
@@ -4015,14 +4015,14 @@ So, this is cool... just updated Contact.md
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Exactly, Robyn — that top block is the **control panel** for the page. 🌿
 
 In Markdown/static-site language, that block is called **front matter**.
 
 This bit:
 
-```markdown id="9y05qa"
+```markdown  
 ---
 title: About
 layout: page.njk
@@ -4041,7 +4041,7 @@ The text **below** the second `---` is the normal editable page content.
 
 Think of each `.md` file as having two parts:
 
-```text id="y2w22a"
+```text  
 1. Header block / front matter
    tells Eleventy how to build the page
 
@@ -4051,7 +4051,7 @@ Think of each `.md` file as having two parts:
 
 Like this:
 
-```markdown id="nlahxg"
+```markdown  
 ---
 title: Contact
 layout: page.njk
@@ -4076,7 +4076,7 @@ Parking is available...
 
 These lines are important:
 
-```markdown id="86lw2u"
+```markdown  
 ---
 ```
 
@@ -4084,7 +4084,7 @@ The opening and closing triple-dash lines must stay.
 
 This line is also important:
 
-```markdown id="jvi5n4"
+```markdown  
 layout: page.njk
 ```
 
@@ -4092,7 +4092,7 @@ That tells Eleventy which design template to use.
 
 This one matters too:
 
-```markdown id="mh0cw3"
+```markdown  
 permalink: /contact/
 ```
 
@@ -4102,7 +4102,7 @@ That tells Eleventy where the page should appear on the site.
 
 The content person can safely change these:
 
-```markdown id="lldjmu"
+```markdown  
 title: Contact
 eyebrow: Contact
 heading: Where to find the group.
@@ -4115,7 +4115,7 @@ And everything below the second `---`.
 
 For novice editors, I’d tell them not to change these unless instructed:
 
-```markdown id="mdcilp"
+```markdown  
 layout: page.njk
 permalink: /contact/
 ```
@@ -4126,7 +4126,7 @@ Because those are structural.
 
 Before, the content person had to avoid breaking things like:
 
-```html id="nx2lqv"
+```html  
 <section class="page-panel">
 <p class="eyebrow">
 <h1 class="page-title">
@@ -4153,7 +4153,7 @@ That is very teachable.
 
 Later, we can add comments or a sample file, something like:
 
-```markdown id="l2a7lu"
+```markdown  
 ---
 title: Contact
 layout: page.njk
@@ -4172,7 +4172,7 @@ Use - for bullet lists.
 
 You are now testing the exact workflow that matters:
 
-```text id="6w6xha"
+```text  
 novice-editable file
 controlled template
 safe design
@@ -4189,14 +4189,14 @@ That is the heart of the whole proof-of-concept. ✨
 
 ## Inserting a Calendar
 
-rrrr
+ Robyn     
 One of the issues the current website has is updates are super-slow, if at all. So, submitting a quick markdown that can be inserted and page updated is amazing.
 
 Now, Calendar. How to insert a calendar?
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Yes — Calendar is one of the easiest and most useful things to insert. And for this site, I’d use the **standard Google Calendar embed**, wrapped in our own styled page.
 
 The beauty is this:
@@ -4211,13 +4211,13 @@ Google’s own Calendar help says you can get an embed code from Calendar settin
 
 We create a new page:
 
-```text id="zpwv1g"
+```text  
 src/content/calendar.md
 ```
 
 That page uses a new template:
 
-```text id="dk7s00"
+```text  
 calendar.njk
 ```
 
@@ -4229,13 +4229,13 @@ The content person does not touch the iframe unless the calendar changes.
 
 From:
 
-```bash id="axtb2n"
+```bash  
 cd ~/docker/afpages
 ```
 
 Create:
 
-```bash id="iquf20"
+```bash  
 cat > src/content/calendar.md <<'EOF'
 ---
 title: Calendar
@@ -4259,7 +4259,7 @@ For now, `calendar_embed_url` is empty. We’ll fill it once you have the Google
 
 # 2. Create the calendar template
 
-```bash id="qc7qb5"
+```bash
 cat > src/_includes/calendar.njk <<'EOF'
 ---
 layout: base.njk
@@ -4306,11 +4306,11 @@ EOF
 
 Append this to:
 
-```bash id="0xdyzb"
+```bash
 src/assets/css/site.css
 ```
 
-```css id="9gjjxb"
+```css
 .calendar-frame {
   margin-top: 2rem;
   border-radius: 24px;
@@ -4338,19 +4338,19 @@ src/assets/css/site.css
 
 Then bump the CSS version in:
 
-```bash id="x526ql"
+```bash
 src/_includes/base.njk
 ```
 
 Change:
 
-```html id="aoa2ad"
+```html
 <link rel="stylesheet" href="/assets/css/site.css?v=4">
 ```
 
 to:
 
-```html id="k3srqo"
+```html
 <link rel="stylesheet" href="/assets/css/site.css?v=5">
 ```
 
@@ -4360,13 +4360,13 @@ to:
 
 Edit:
 
-```bash id="7t2d5y"
+```bash
 src/_includes/base.njk
 ```
 
 Find the nav:
 
-```html id="gcjmfc"
+```html
 <a href="/sessions/" {% if page.url == "/sessions/" %}aria-current="page"{% endif %}>Sessions</a>
 <a href="/gallery/" {% if page.url == "/gallery/" %}aria-current="page"{% endif %}>Gallery</a>
 <a href="/contact/" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Contact</a>
@@ -4374,7 +4374,7 @@ Find the nav:
 
 Change it to:
 
-```html id="6t9wj7"
+```html
 <a href="/sessions/" {% if page.url == "/sessions/" %}aria-current="page"{% endif %}>Sessions</a>
 <a href="/calendar/" {% if page.url == "/calendar/" %}aria-current="page"{% endif %}>Calendar</a>
 <a href="/gallery/" {% if page.url == "/gallery/" %}aria-current="page"{% endif %}>Gallery</a>
@@ -4383,13 +4383,13 @@ Change it to:
 
 Then build:
 
-```bash id="kogxa8"
+```bash
 npm run build
 ```
 
 Visit:
 
-```text id="b83zhg"
+```text
 http://100.114.231.3:8081/calendar/
 ```
 
@@ -4411,7 +4411,7 @@ In Google Calendar, on a computer:
 
 Google gives you something like this:
 
-```html id="x5dd80"
+```html
 <iframe src="https://calendar.google.com/calendar/embed?src=..." style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 ```
 
@@ -4419,7 +4419,7 @@ You only want the URL inside `src="..."`.
 
 That part:
 
-```text id="7aaxcq"
+```text
 https://calendar.google.com/calendar/embed?src=...
 ```
 
@@ -4429,31 +4429,31 @@ https://calendar.google.com/calendar/embed?src=...
 
 Edit:
 
-```bash id="z2rbdm"
+```bash
 nano src/content/calendar.md
 ```
 
 Change this:
 
-```yaml id="c1z1iz"
+```yaml
 calendar_embed_url: ""
 ```
 
 to something like:
 
-```yaml id="bhrydy"
+```yaml
 calendar_embed_url: "https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_HERE&ctz=Australia%2FBrisbane"
 ```
 
 Then:
 
-```bash id="ogzyqa"
+```bash
 npm run build
 ```
 
 Refresh:
 
-```text id="qz1gls"
+```text
 http://100.114.231.3:8081/calendar/
 ```
 
@@ -4467,7 +4467,7 @@ For the **private Tailscale proof-of-concept**, this may not matter if viewers a
 
 That means:
 
-```text id="pzkbah"
+```text
 Good:
 Wednesday Art Journalling
 10:00–12:00
@@ -4489,7 +4489,7 @@ Not someone’s personal Google Calendar.
 
 That gives you clean boundaries:
 
-```text id="ar9z4v"
+```text
 Google Calendar = source of truth for events
 afpages = displays it
 Markdown = explains it
@@ -4507,12 +4507,12 @@ Very tidy. Very safe. Very committee-proof. 🌿
 
 ## Celeste's Calendar
 
-rrrr
+ Robyn     
 I set up a celestesgrl@gmail.com *specifically* for this sort of testing. Celeste assures me she's happy, as long as Charlotte doesn't mind.
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Perfect. Celeste is showing excellent governance instincts. Charlotte may raise one eyebrow, but she’ll approve the separation of concerns. 😄
 
 Using `celestesgrl@gmail.com` as a **sandbox/test identity** is exactly the right move because it gives you:
@@ -4570,7 +4570,7 @@ Celeste may be mischievous, but she is not careless.
 
 ## Calendar Done
 
-rrrr
+ Robyn     
 All done. Calendar events in, and displaying. And if an extra session is added, violà... visible.
 
 I think this is beyond incredible.
@@ -4583,12 +4583,12 @@ Tomorrow is Writing Friday. Looking forward to giving some thought to young Cele
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Robyn, that is genuinely wonderful. 🌺
 
 You now have:
 
-```text id="4xgf2x"
+```text
 Static site in Docker ✅
 Modern design ✅
 Markdown-driven content ✅
@@ -4615,7 +4615,7 @@ You have moved the thing from vague possibility to visible reality in one evenin
 
 So the right move now is probably:
 
-```text id="v3jzf3"
+```text
 Pause
 Let them look
 Let the president digest it
@@ -4631,7 +4631,7 @@ Re-creating your old **Tightbytes** pages with the same pattern is a *brilliant*
 
 You will learn the structure without committee pressure:
 
-```text id="w6b2vb"
+```text
 content pages
 image assets
 templates
@@ -4662,12 +4662,12 @@ Enjoy Writing Friday tomorrow. Young Celeste is waiting, no doubt already certai
 
 ## Cards
 
-rrrr
+ Robyn     
 Just curious: what else would be done that we haven't yet? Cards? What else would you have suggested doing?
 
 <hr class="section-break soft" />
 
-eeee
+ Emily     
 Oh, lots — but not in a frantic “must do now” way. What we built tonight is the **spine**. The next work would be about making it more maintainable, more elegant, and more reusable. 🌿
 
 ## 1. Cards from simple data
@@ -4978,6 +4978,309 @@ That would turn the current working prototype into a genuinely maintainable mini
 
 The biggest wins would be **cards from data**, **gallery from data**, and **site settings**. Those three would make the structure reusable for Tightbytes or RCAS with much less duplication. ✨
 
+---
+
+ Robyn     
+Very exciting, indeed!
+
+---
+
+ Emily     
+It really is, Robyn. 🌺
+
+And the exciting part is not just “we made a web page.”
+
+It’s that you now have a **pattern**:
+
+```text  
+simple content files
+controlled templates
+lovely CSS
+Docker serving
+Tailscale preview
+future Cloudflare deployment
+```
+
+That pattern can become:
+
+```text  
+afpages
+Tightbytes
+RCAS prototype
+private writing/project pages
+documentation sites
+image galleries
+small community sites
+```
+
+And each new site will be faster because the hard conceptual work is already done.
+
+Tonight’s breakthrough is that the web has become *yours* again — not rented from Squarespace, not tangled in WordPress, not dependent on some opaque admin panel. Just files, structure, taste, and a little containerised mischief. ✨
+
+<hr class="section-break strong" />
+
+
+
+
+## Backing Up
+
+ Robyn     
+Oh, one more thing. I don't plan on shutting this container down, but if we lost power, the whole site would go back to original. What can I do to back all this up?
+
+<hr class="section-break soft" />
+
+ Emily     
+Good instinct — but one reassuring correction first:
+
+**A power loss should not make the site “go back to original”** because your important files are on the host filesystem here:
+
+```bash
+~/docker/afpages
+```
+
+The Nginx container is only serving this host folder:
+
+```yaml
+./public:/usr/share/nginx/html:ro
+```
+
+So as long as `~/docker/afpages` survives, your site survives. The container can be destroyed and recreated and the files remain. Docker containers are disposable; your project folder is the treasure chest. 🧰✨
+
+Also, your compose file already has:
+
+```yaml
+restart: unless-stopped
+```
+
+So after a reboot, Docker should bring `afpages` back up automatically, assuming Docker itself starts at boot.
+
+## First: confirm Docker starts on boot
+
+Run:
+
+```bash
+sudo systemctl is-enabled docker
+```
+
+If it says `enabled`, good.
+
+If not:
+
+```bash
+sudo systemctl enable docker
+```
+
+After a future power loss/reboot, the container should come back.
+
+You can check with:
+
+```bash
+docker ps
+```
+
+---
+
+# Backing up afpages properly
+
+I’d do this in layers.
+
+## Layer 1: quick manual snapshot
+
+From anywhere:
+
+```bash
+cd ~/docker
+tar -czf afpages-backup-$(date +%Y-%m-%d_%H-%M).tar.gz afpages
+```
+
+That creates something like:
+
+```text
+afpages-backup-2026-05-07_2135.tar.gz
+```
+
+You could then copy that to another machine, your Nextcloud, or an external drive.
+
+To see it:
+
+```bash
+ls -lh ~/docker/afpages-backup-*.tar.gz
+```
+
+## Layer 2: copy it to your Nextcloud data/files area or backup drive
+
+If you have a backup location mounted, for example:
+
+```bash
+/mnt/cloudbackup
+```
+
+you could do:
+
+```bash
+cp ~/docker/afpages-backup-*.tar.gz /mnt/cloudbackup/
+```
+
+Or if you want a tidy backup folder:
+
+```bash
+mkdir -p /mnt/cloudbackup/afpages
+cp ~/docker/afpages-backup-*.tar.gz /mnt/cloudbackup/afpages/
+```
+
+Adjust the destination to wherever your i5seabrae backup storage actually lives.
+
+---
+
+# Layer 3: Git — best long-term answer
+
+For this kind of static site, Git is perfect.
+
+From:
+
+```bash
+cd ~/docker/afpages
+```
+
+Run:
+
+```bash
+git init
+git add .
+git commit -m "Initial afpages static site prototype"
+```
+
+But before committing, create a `.gitignore` so you do not commit the Node circus:
+
+```bash
+cat > .gitignore <<'EOF'
+node_modules/
+.DS_Store
+*.log
+EOF
+```
+
+Then:
+
+```bash
+git add .
+git commit -m "Initial afpages static site prototype"
+```
+
+Now you have local version history.
+
+Whenever you make meaningful changes:
+
+```bash
+git add .
+git commit -m "Update calendar page and content templates"
+```
+
+This gives you rollback. If something breaks, you can see what changed.
+
+## Later: push to GitHub
+
+Eventually:
+
+```text
+local afpages repo → GitHub private/public repo → Cloudflare Pages later
+```
+
+That gives you an off-machine backup and a deployment path.
+
+For now, even local Git is useful.
+
+---
+
+# Layer 4: simple repeatable backup script
+
+You could create:
+
+```bash
+nano ~/docker/backup-afpages.sh
+```
+
+Paste:
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+
+SOURCE="$HOME/docker/afpages"
+DEST="$HOME/docker/backups/afpages"
+STAMP="$(date +%Y-%m-%d_%H-%M)"
+
+mkdir -p "$DEST"
+
+tar -czf "$DEST/afpages-$STAMP.tar.gz" -C "$HOME/docker" afpages
+
+echo "Backup created:"
+echo "$DEST/afpages-$STAMP.tar.gz"
+```
+
+Make it executable:
+
+```bash
+chmod +x ~/docker/backup-afpages.sh
+```
+
+Run it:
+
+```bash
+~/docker/backup-afpages.sh
+```
+
+That creates timestamped backups in:
+
+```text
+~/docker/backups/afpages/
+```
+
+Later, we could modify that script to also copy backups to an external disk or Nextcloud folder.
+
+---
+
+# What I’d do tonight
+
+I’d do the simple sensible version:
+
+```bash
+cd ~/docker/afpages
+
+cat > .gitignore <<'EOF'
+node_modules/
+.DS_Store
+*.log
+EOF
+
+git init
+git add .
+git commit -m "Initial afpages static site prototype"
+```
+
+Then make one tarball:
+
+```bash
+cd ~/docker
+tar -czf afpages-backup-$(date +%Y-%m-%d_%H-%M).tar.gz afpages
+```
+
+That gives you:
+
+```text
+Git rollback ✅
+Snapshot backup ✅
+Container restart on reboot ✅
+Host files preserved ✅
+```
+
+The main thing to remember is:
+
+> The container is not the site.
+> `~/docker/afpages` is the site.
+
+That folder is what we protect.
+
 <hr class="section-break strong" />
 
 
@@ -4999,13 +5302,6 @@ The biggest wins would be **cards from data**, **gallery from data**, and **site
 <hr class="section-break strong" />
 
 
-
-
-## 
-
-<hr class="section-break soft" />
-
-<hr class="section-break strong" />
 
 <!--           Image Links         /-->
 
