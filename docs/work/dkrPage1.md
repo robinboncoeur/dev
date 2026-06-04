@@ -18,7 +18,7 @@
 
 [![Robyn][Bs02]{ .artL width="60" }][Bs02]
 
- Robyn     
+Robyn     
 Hi Emily. Going to start a new thread with this conundrum that's dropped in my lap.
 
 The Art Society. Because, of course.
@@ -32,14 +32,16 @@ So far, I've set up a github page for the Society to store assets like images. I
 
 [![Emily][Bs01]{ .artL width="60" }][Bs01]
 
- Emily     
+Emily        
 Hi Robyn 🌺 — yes, there are very workable options here, especially because the Society’s website sounds mostly informational rather than transactional.
 
 My instinct: **do not replace Squarespace with another expensive “website builder” unless someone truly wants to keep using a drag-and-drop editor.** For an art society, a clean static site could look modern, load quickly, cost almost nothing, and be much easier to govern.
 
-## The practical options
+### The practical options
 
-### 1. Stay with Squarespace, but simplify the workflow
+---
+1. Stay with Squarespace, but simplify the workflow
+---
 
 This is the least disruptive option. Squarespace gives the “modern page” look with minimal technical knowledge, but the cost is ongoing. Current Australian-facing pricing references put Squarespace in roughly the **AUD $17–$62/month** range depending on plan, and a business-style plan can easily end up several hundred dollars per year. ([Forbes][1])
 
@@ -48,8 +50,8 @@ The real problem, though, is not just cost. It is **single-person dependency**. 
 Good only if: the Society values drag-and-drop editing more than saving money.
 
 ---
-
-### 2. GitHub Pages site with custom domain — probably the cheapest
+2. GitHub Pages site with custom domain — probably the cheapest
+---
 
 Since you have already set up a GitHub page for Society assets, this is the natural next step. GitHub Pages is available on GitHub Free for public repositories, including organisations, and it supports custom domains. ([GitHub Docs][2])
 
@@ -70,8 +72,8 @@ The wholesale price for `.org.au`, `.com.au`, `.net.au`, `.au` etc is currently 
 Good if: you, or someone technical, can create the site and document the update process.
 
 ---
-
-### 3. Cloudflare Pages — my favourite for “static but polished”
+3. Cloudflare Pages — my favourite for “static but polished”
+---
 
 Cloudflare Pages is very similar in spirit to GitHub Pages but arguably better as a long-term hosting platform. The free tier includes unlimited sites, unlimited static requests, unlimited bandwidth, and custom domains. ([Cloudflare Pages][5]) Cloudflare’s own docs also say static asset requests are free and unlimited on both free and paid plans. ([Cloudflare Docs][6])
 
@@ -86,8 +88,8 @@ That is neat, robust, and very “Society-owned” rather than “Robyn is now t
 Good if: you want the Society’s domain, DNS, and site hosting to live in one sensible place.
 
 ---
-
-### 4. WordPress.com or cheap shared hosting — possible, but I’d be cautious
+4. WordPress.com or cheap shared hosting — possible, but I’d be cautious
+---
 
 WordPress gives non-technical people a familiar editing dashboard, but it brings updates, plugins, security, spam, themes, and the eternal little goblin called “why has the layout changed?”
 
@@ -97,7 +99,7 @@ Good if: they truly need editor access for several people and are willing to pay
 
 ---
 
-## My recommendation
+### My recommendation
 
 I’d build them a **static site**, hosted on **Cloudflare Pages or GitHub Pages**, with their own `.org.au` domain.
 
@@ -126,7 +128,7 @@ Optional, but useful for transparency.
 
 The result could look modern enough to satisfy the “Squarespace polish” requirement, but cost almost nothing beyond the domain.
 
-## The key design principle
+### The key design principle
 
 The website should not be “edited” in the old sense. It should be **fed**.
 
@@ -140,7 +142,7 @@ The public site remains clean and stable.
 
 This is the same principle as your booking system: **one source of truth, many public outputs.**
 
-## What I would tell the Society
+### What I would tell the Society
 
 Something like this:
 
@@ -165,7 +167,9 @@ That last sentence is the dagger in the velvet glove. Necessary, elegant, and ha
 
 ## Direction
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 So, here is where I want to go with this, Emily.
 
 I want to create a nice-looking (read: modern) static-page website. It needs to be easily maintainable by website novices, with few data entry points. Text data can be pulled from markdown pages. Images would be pulled from a dedicated folder.
@@ -176,8 +180,10 @@ Sound reasonable?
 
 <hr class="section-break soft" />
 
- Emily     
-Yes, Robyn — **very reasonable**. More than reasonable: this is exactly the sort of restrained, low-cost architecture that suits the Society. 🌿
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
+Yes,Robyn — **very reasonable**. More than reasonable: this is exactly the sort of restrained, low-cost architecture that suits the Society. 🌿
 
 You are describing a **static site with a small content pipeline**:
 
@@ -185,7 +191,7 @@ You are describing a **static site with a small content pipeline**:
 
 That gives you the polish of a “proper website” without the Squarespace subscription, plugin swamp, login-dashboard sprawl, or one-person bottleneck.
 
-## First: Cloudflare and JavaScript
+### First: Cloudflare and JavaScript
 
 Cloudflare Pages absolutely supports normal **client-side JavaScript**, because that is just part of the static site: HTML, CSS, JS, images, fonts, etc. Cloudflare’s current docs describe Pages as a platform for static sites and front-end apps, and Cloudflare also has Pages Functions for server-side logic if you ever need things like form handling later. ([Cloudflare Docs][1])
 
@@ -204,7 +210,7 @@ Very robust. Very portable.
 
 ---
 
-# Nginx or Apache?
+#### Nginx or Apache?
 
 For this project, I would choose **Nginx**.
 
@@ -220,7 +226,7 @@ It is lean, boring, fast, and ideal for this.
 
 ---
 
-# The important distinction
+#### The important distinction
 
 Nginx should **serve** the site.
 
@@ -249,9 +255,11 @@ That separation is lovely. It keeps the cleverness out of the web server.
 
 ---
 
-# Static generator options
+#### Static generator options
 
-## Option A: Eleventy / 11ty — probably my pick
+---
+Option A: Eleventy / 11ty — probably my pick
+---
 
 Eleventy is excellent for small static sites built from Markdown. It is simple, flexible, and not overbearing.
 
@@ -292,11 +300,15 @@ assets/images/
 
 That is the dream.
 
-## Option B: Hugo
+---
+Option B: Hugo
+---
 
 Hugo is very fast and very good, but its themes and structure can feel a little more technical at first. It is powerful, but I suspect Eleventy would feel more “Robyn-readable.”
 
-## Option C: MkDocs Material
+---
+Option C: MkDocs Material
+---
 
 You already know and like MkDocs Material. It is excellent for documentation-style sites, but for an art society’s public website, it may feel slightly too “documentation portal” unless heavily styled.
 
@@ -304,7 +316,7 @@ For this project, I would keep MkDocs in reserve.
 
 ---
 
-# My preferred architecture
+### My preferred architecture
 
 For now, locally:
 
@@ -322,11 +334,11 @@ This is a beautiful migration path because the exact same content and structure 
 
 ---
 
-# Local Docker approach
+### Local Docker approach
 
 You can start with a very simple Docker Compose setup.
 
-## `docker-compose.yml`
+**docker-compose.yml**
 
 ```yaml
 services:
@@ -362,7 +374,7 @@ This assumes `public/` already contains the built site.
 
 ---
 
-# Development workflow
+### Development workflow
 
 You would edit Markdown files, build the site, then Nginx serves the result.
 
@@ -387,7 +399,7 @@ That is very nice.
 
 ---
 
-# Website novice maintenance model
+### Website novice maintenance model
 
 This is the big governance win.
 
@@ -395,7 +407,7 @@ The Society does **not** need ten places to update information.
 
 Ideally:
 
-## Text updates
+**Text updates**
 
 They edit Markdown files like:
 
@@ -420,7 +432,9 @@ We welcome beginners, experienced artists, tutors, and visitors.
 
 Nice and tame.
 
-## Image updates
+---
+Image updates
+---
 
 They add files to:
 
@@ -434,7 +448,9 @@ Then refer to them in Markdown:
 ![Students painting in the studio](/assets/images/workshop.jpg)
 ```
 
-## Events
+---
+Events
+---
 
 Do **not** manually maintain events on the website.
 
@@ -442,7 +458,9 @@ Embed the public read-only Google Calendar from your Booking App setup.
 
 One source of truth.
 
-## Classes / bookings
+---
+Classes / bookings
+---
 
 Do **not** manually maintain class booking tables unless absolutely necessary.
 
@@ -458,7 +476,7 @@ Again: one source of truth.
 
 ---
 
-# CSS does the visual heavy lifting
+### CSS does the visual heavy lifting
 
 Yes. Strongly agree.
 
@@ -492,7 +510,7 @@ All CSS.
 
 ---
 
-# A good first version
+### A good first version
 
 I would build v0.1 as:
 
@@ -537,7 +555,7 @@ That gives you a modern page without making people edit HTML.
 
 ---
 
-# The one caution
+### The one caution
 
 “Easily maintainable by website novices” and “Markdown + GitHub” can clash a little.
 
@@ -547,15 +565,15 @@ Git can be intimidating.
 
 So I would plan for one of these maintenance models:
 
-## Model 1: Robyn/admin maintains repo
+Model 1: Robyn/admin maintains repo
 
 Simplest technically, but risks making you the bottleneck.
 
-## Model 2: GitHub web editor
+Model 2: GitHub web editor
 
 A novice can edit `about.md` directly in GitHub’s web interface. Not terrible, but needs a little training.
 
-## Model 3: Decap CMS later
+Model 3: Decap CMS later
 
 Formerly Netlify CMS. It gives a browser-based editing interface backed by Git. This is more setup, but it lets people update Markdown without feeling like they are “doing Git.”
 
@@ -567,7 +585,7 @@ The governing principle:
 
 ---
 
-# My suggested starting stack
+### My suggested starting stack
 
 For your local prototype:
 
@@ -598,7 +616,7 @@ Same images
 
 Very clean. Very Society-appropriate. ✨
 
-## Verdict
+**Verdict**
 
 Yes: **Docker Nginx + static generator + Markdown + image folder** is the right direction.
 
@@ -623,14 +641,18 @@ That is a very sensible path.
 
 ## Timing
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Would you believe that I have been asked by the RCAS president to *specifically NOT* develop the site for RCAS for now, but rather for Wednesday "Arty-Farty" art-journalling group, internal as proof-of-concept, where the structure of those pages could easily by applied to a new website at some stage in the future (not now). Again, spinning it up in a container is going to be served locally at first, but could be reachable via tailscale to show: "here's what we have at home at the moment". Because: why not. It's in a container.
 
 
 <hr class="section-break soft" />
 
- Emily     
-I would absolutely believe it, Robyn. In fact, it is almost *perfectly* committee-shaped. 😄
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
+I would absolutely believe it,Robyn. In fact, it is almost *perfectly* committee-shaped. 😄
 
 And honestly? The president’s instinct is not bad here.
 
@@ -641,7 +663,7 @@ You are demonstrating a **small, controlled, modern static site model** that cou
 
 That is politically much easier.
 
-## The proof-of-concept framing is excellent
+### The proof-of-concept framing is excellent
 
 The message becomes:
 
@@ -663,7 +685,7 @@ Instead, they can simply see:
 
 That is exactly how you get people comfortable with change.
 
-## And yes — container + local + Tailscale is ideal
+### Container+local+Tailscale=Ideal
 
 Your architecture becomes:
 
@@ -703,7 +725,7 @@ http://i5seabrae:8080
 
 depending on MagicDNS and your tailnet setup.
 
-## Why this is better than starting with RCAS proper
+### Why this is better than starting with RCAS proper
 
 The Wednesday group gives you a softer target:
 
@@ -744,7 +766,7 @@ Contact            → Contact
 
 So the proof-of-concept is not wasted work. It is a miniature of the future architecture.
 
-## I would call it something like this internally
+### I would call it something like this internally
 
 Not “new website.”
 
@@ -773,7 +795,7 @@ A lightweight website prototype for group pages and visual updates
 
 That phrasing matters. It keeps the thing exploratory, not threatening.
 
-## Suggested local project structure
+### Suggested local project structure
 
 I would make it deliberately reusable:
 
@@ -823,7 +845,7 @@ package.json
 
 That is exactly the right division.
 
-## Docker still makes sense
+### Docker still makes sense
 
 Even though this is “just” local, Docker gives you a wonderfully clean demo story:
 
@@ -873,7 +895,7 @@ Via Tailscale:
 http://TAILSCALE-IP:8081
 ```
 
-## A very nice first demo goal
+### A very nice first demo goal
 
 I would not try to make the whole thing elaborate.
 
@@ -935,7 +957,7 @@ done
 
 Lovely.
 
-## The hidden strategic benefit
+### The hidden strategic benefit
 
 This also gives you room to prove the maintenance model.
 
@@ -996,12 +1018,16 @@ Beautiful. 😄
 
 ## Server Status
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 I'm back... just jumped on my i5seabrae system: it's running nextcloud and portainer in containers, and docker ps shows them both active - been so for 3 days!
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Brilliant, Robyn! 🎉
 
 That is *exactly* what we wanted to see:
@@ -1083,13 +1109,17 @@ This is the perfect little foundation. Containers behaving, server stable, Porta
 
 ## Tailscale Status
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Looks like tailscale is installed (checked with 'which tailscale') but not running (checked with 'systemctl status tailscale'). Should I get it up and running first, or is that something to look at after we build the pages? BTW, for brevity, I'm going to call the Arty-Farty Webpages afpages.
 
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Yes — **afpages** is perfect. Nice and short. 😊
 
 I’d get Tailscale running **before** building the pages, but only as a quick infrastructure check, not as the main job.
@@ -1108,7 +1138,7 @@ http://100.x.x.x:8081
 
 from another Tailscale-connected device.
 
-## The order I’d use
+### The order I’d use
 
 First, check/start Tailscale:
 
@@ -1158,7 +1188,7 @@ Markdown → static HTML → Nginx container → local browser
 
 Tailscale is just the private demonstration tunnel. Useful, but not foundational.
 
-## My recommendation
+### My recommendation
 
 Do this now:
 
@@ -1193,9 +1223,13 @@ afpages next 🌿
 
 
 
+
+
 ## Tailscale Up
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 ```text
 100.114.231.3    i5seabrae             robinboncoeur@  linux    -                                                           
 100.69.121.40    charlotte-macbookair  robinboncoeur@  linux    offline, last seen 4h ago                                   
@@ -1211,7 +1245,9 @@ celestesh@i5Seabrae:~/docker$
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Excellent. That means Tailscale is not merely installed — it is **running and connected** on `i5seabrae`. 🎉
 
 Your relevant line is:
@@ -1274,16 +1310,20 @@ Then we can create the first minimal Nginx static container and prove the hostin
 
 Nice. The little server is ready for mischief. 😄
 
----
+<hr class="section-break soft" />
 
- Robyn     
-I **LOVE** mischief! We'll go steal horses together, Emily!
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
+I **LOVE** mischief! We'll go steal horses together,Emily!
 
 You lead: I'll hold your hat.
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Right then: first horse. 🐎
 
 On `i5seabrae`, from your terminal:
@@ -1400,14 +1440,21 @@ If that page appears, then congratulations: **afpages has stolen its first horse
 
 
 
+
+
 ## First Page Done
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+
+Robyn     
 You **BEAUTY!!** Stunning first page... worked an absolute treat!
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 YESSS! 🎉🐎
 
 That is the best possible first win:
@@ -1422,7 +1469,7 @@ afpages officially alive ✅
 
 And the really lovely bit: we now have a working “horse” before we start decorating the saddle. That means every next step is incremental, not mysterious.
 
-## What we have now
+### What we have now
 
 Your current structure is essentially:
 
@@ -1441,7 +1488,7 @@ Nginx is serving whatever lives in:
 
 So the container side is done for now. It works.
 
-## Next sensible step
+### Next sensible step
 
 Now we turn it from a hand-written static page into a tiny website structure:
 
@@ -1477,7 +1524,7 @@ The reason is simple: when we introduce Eleventy, we’ll know any problem is th
 
 Good little engineering ladder.
 
-## The next horse to steal
+### The next horse to steal
 
 When you’re ready, the next move is:
 
@@ -1497,14 +1544,18 @@ But for now: **afpages exists**.
 
 That is genuinely a big foundation step. Beautifully done, Robyn. 🌺
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Strong work, Emily. Moving blithely forward...
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily     
 Right. Let’s give **afpages** its first proper website bones.
 
 Make sure you are here:
@@ -1513,14 +1564,14 @@ Make sure you are here:
 cd ~/docker/afpages
 ```
 
-## 1. Create the asset folders
+1. Create the asset folders
 
 ```bash
 mkdir -p public/assets/css
 mkdir -p public/assets/images
 ```
 
-## 2. Create the shared CSS file
+2. Create the shared CSS file
 
 ```bash
 cat > public/assets/css/site.css <<'EOF'
@@ -1769,7 +1820,7 @@ main {
 EOF
 ```
 
-## 3. Replace `index.html` with the first real homepage
+3. Replace `index.html` with the first real homepage
 
 ```bash
 cat > public/index.html <<'EOF'
@@ -1839,7 +1890,7 @@ cat > public/index.html <<'EOF'
 EOF
 ```
 
-## 4. Create the secondary pages
+4. Create the secondary pages
 
 ```bash
 cat > public/about.html <<'EOF'
@@ -2055,7 +2106,7 @@ cat > public/contact.html <<'EOF'
 EOF
 ```
 
-## 5. Refresh the browser
+5. Refresh the browser
 
 No Docker restart should be needed.
 
@@ -2087,15 +2138,21 @@ Mischief upgraded. ✨
 
 
 
+
+
 ## Modifications
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 The font is massive - I guess by design. Very tasteful colours and overall design. I like!!
 
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Excellent! 🎨
 
 Yes, the massive font is by design — modern “hero” style:
@@ -2110,7 +2167,7 @@ That gives the page its big contemporary magazine/poster feel. For an art-journa
 
 But we can tame it slightly if you want the design to feel less “statement poster” and more “welcoming community arts page.”
 
-## Current feel
+### Current feel
 
 ```text
 Bold
@@ -2120,7 +2177,7 @@ Confident
 Slightly arts-magazine
 ```
 
-## Slightly gentler version
+### Slightly gentler version
 
 In:
 
@@ -2156,7 +2213,7 @@ Change to:
 
 That keeps the modern feel but makes it a touch less shouty.
 
-## Even softer
+### Even softer
 
 ```css  
 .hero h1,
@@ -2183,7 +2240,7 @@ boutique arts festival keynote
 
 Not that there is anything wrong with a boutique arts festival keynote, naturally. 😄
 
-## My recommendation
+### My recommendation
 
 For the proof-of-concept, I’d use the **slightly gentler version**:
 
@@ -2197,14 +2254,18 @@ It still looks polished, but it may sit more comfortably for RCAS members who ar
 
 The palette is doing exactly what it should: warm, handmade, paper-adjacent, but not dusty. Very “art table without looking like a scrapbook exploded.” ✨
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 We can do all that later, Emily. I've been told to just network connect to the president's personal page and steal artwork. As if I had a clue what to look for. Oh well, I'll have a go.
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 
 Ah yes, the noble web-design method known as **“go over there and nick something tasteful.”** 😄
 
@@ -2285,7 +2346,7 @@ not blurry
 
 If an image is huge, that is fine for now. Later we can optimise sizes properly.
 
-## If you are copying from another computer
+### If you are copying from another computer
 
 From your Mac, you can use `scp` if SSH is available:
 
@@ -2313,17 +2374,21 @@ Tonight’s mission is not curatorial perfection. It is merely:
 
 That will tell us a lot. 🌺
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 I did tone it down to modern community group. Where is the hero.jpg image referenced? Images once cached seem impossible to refresh.
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Good move — **modern community group** is probably the sweet spot. Polished without looking as if it has arrived wearing sunglasses indoors. 😄
 
-## Where `hero.jpg` is referenced
+### Where `hero.jpg` is referenced
 
 It is referenced in the CSS, not the HTML.
 
@@ -2364,7 +2429,7 @@ So the expected file path is:
 ~/docker/afpages/public/assets/images/hero.jpg
 ```
 
-## The browser caching nuisance
+### The browser caching nuisance
 
 Yes — browsers can be absurdly stubborn with cached images, especially when the filename stays the same.
 
@@ -2390,7 +2455,7 @@ url("/assets/images/hero.jpg?v=3");
 
 The actual file is still `hero.jpg`; the browser just treats the URL as new.
 
-## You can do the same for CSS
+### You can do the same for CSS
 
 In the HTML files, you currently have:
 
@@ -2412,11 +2477,11 @@ Then bump it when needed:
 
 That forces the browser to reload the CSS.
 
-## Even better: tell Nginx not to cache during development
+### Even better: tell Nginx not to cache during development
 
 We can add a simple Nginx config later, but for now the query-string trick is fastest.
 
-## Browser hard refresh
+### Browser hard refresh
 
 You can also try:
 
@@ -2430,7 +2495,7 @@ Or open DevTools and right-click reload → **Empty Cache and Hard Reload**.
 
 But honestly, the `?v=2` trick is usually less aggravating.
 
-## Quick check from terminal
+### Quick check from terminal
 
 To confirm the image is actually there:
 
@@ -2461,9 +2526,12 @@ Most likely, though, it is just browser cache being a tiny gremlin. 🐾
 
 
 
+
 ## Moving On
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 That ?v=2 did the trick. Thank you.
 
 Right, what's next?
@@ -2472,10 +2540,12 @@ BTW, the president is gobsmacked that there's already a proof-of-concept **DONE*
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Wonderful. That reaction from the president is *gold* — because the concept now has emotional proof, not just technical proof. “Look, it already exists” is far more persuasive than a meeting full of hypotheticals. ✨
 
-## Next: make it maintainable
+### Next: make it maintainable
 
 Right now **afpages** is a hand-built static site:
 
@@ -2514,8 +2584,8 @@ content/contact.md
 That is the “novice maintainable” leap.
 
 ---
-
-# Step 1: check Node/npm
+1: check Node/npm
+---
 
 On `i5seabrae`, inside the project:
 
@@ -2530,8 +2600,8 @@ If both return version numbers, proceed.
 If not, we’ll install Node later. But check first.
 
 ---
-
-# Step 2: initialise the project
+2: initialise the project
+---
 
 ```bash
 npm init -y
@@ -2546,8 +2616,8 @@ npm install @11ty/eleventy --save-dev
 That matches the official Eleventy setup model: create `package.json`, install `@11ty/eleventy`, then run it with `npx` or npm scripts. ([Eleventy][1])
 
 ---
-
-# Step 3: create the source folders
+3: create the source folders
+---
 
 We’ll separate editable content from generated output:
 
@@ -2592,8 +2662,8 @@ src/assets/images/
 Beautifully contained.
 
 ---
-
-# Step 4: move the CSS and images into `src`
+4: move the CSS and images into `src`
+---
 
 Copy the current CSS:
 
@@ -2610,8 +2680,8 @@ cp -r public/assets/images/* src/assets/images/ 2>/dev/null || true
 That keeps the source version complete.
 
 ---
-
-# Step 5: create the Eleventy config
+5: create the Eleventy config
+---
 
 Create:
 
@@ -2651,8 +2721,8 @@ Write the finished site into public
 Which means Nginx can keep doing exactly what it already does.
 
 ---
-
-# Step 6: create the reusable template
+6: create the reusable template
+---
 
 Create:
 
@@ -2703,8 +2773,8 @@ This is the important bit. We now have one header, one nav, one footer.
 Edit once, change everywhere.
 
 ---
-
-# Step 7: create the Markdown homepage
+7: create the Markdown homepage
+---
 
 Create:
 
@@ -2756,8 +2826,8 @@ layout: base.njk
 Yes, this Markdown file contains some HTML. That is okay. For polished page sections, this is normal and practical.
 
 ---
-
-# Step 8: create the other Markdown pages
+8: create the other Markdown pages
+---
 
 ```bash
 cat > src/content/about.md <<'EOF'
@@ -2873,8 +2943,8 @@ EOF
 ```
 
 ---
-
-# Step 9: add npm scripts
+9: add npm scripts
+---
 
 Run:
 
@@ -2914,7 +2984,7 @@ http://100.114.231.3:8081/contact/
 
 ---
 
-# Where this leaves us
+### Where this leaves us
 
 After this, **afpages** becomes a proper maintainable static site:
 
@@ -2934,14 +3004,18 @@ That is a very strong little proof-of-concept. 🌺
 
 [1]: https://www.11ty.dev/docs/?utm_source=chatgpt.com "Getting Started — Eleventy - 11ty"
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Sorry, have to install node and npm.
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 No worries at all — that is expected on a clean little server. 😊
 
 On Debian/Ubuntu/Zorin/Mint-style systems, first try the standard repo version:
@@ -2985,9 +3059,11 @@ npm -v
 
 and tell me what versions you get.
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 celestesh@i5Seabrae:~/docker/afpages$ node -v   
 v20.19.2   
 celestesh@i5Seabrae:~/docker/afpages$ npm -v   
@@ -2996,7 +3072,9 @@ celestesh@i5Seabrae:~/docker/afpages$
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Perfect. That is a very nice Node version. ✅
 
 ```text
@@ -3283,12 +3361,16 @@ This is the moment **afpages** stops being a hand-written mockup and becomes a m
 
 ## Difference?
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Am I expected to see a massive difference?
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 No — not visually. 😊
 
 At this stage you should **not** see a massive difference.
@@ -3317,7 +3399,7 @@ The header/nav/footer are reusable
 Content can begin moving into Markdown
 ```
 
-## How to confirm the change worked
+### How to confirm the change worked
 
 Check that Eleventy created folders like this:
 
@@ -3354,7 +3436,7 @@ rather than:
 /contact.html
 ```
 
-## Test one obvious change
+### Test one obvious change
 
 Edit this file:
 
@@ -3382,7 +3464,7 @@ http://100.114.231.3:8081/about/
 
 If the heading changes, the new system is working.
 
-## Why this matters
+### Why this matters
 
 This is the boring-but-powerful step. The president may not notice a visible change, but structurally you now have the thing you wanted:
 
@@ -3399,9 +3481,11 @@ So no, not a dramatic visual difference.
 
 More like: same pretty horse, now with a saddle and paperwork. 🐎✨
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 
 ```text
 ├── public
@@ -3450,7 +3534,9 @@ celestesh@i5Seabrae:~/docker/afpages$
 
 ---
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Yes — that looks right. ✅
 
 The only untidy bit is this:
@@ -3482,7 +3568,7 @@ http://100.114.231.3:8081/gallery/
 http://100.114.231.3:8081/sessions/
 ```
 
-## Clean up the old files
+### Clean up the old files
 
 From:
 
@@ -3510,7 +3596,7 @@ find public -maxdepth 2 -type f | sort
 
 You should see the new folder-style pages, without the old `.html` files.
 
-## About this line
+### About this line
 
 ```text  
 329 directories, 1616 files
@@ -3550,14 +3636,18 @@ That is the important mental shift. 🌿
 
 ## Tree
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 So, I went in and edited the About.md using Nano. Did a npm run build. Changes reflected.
 
 I do use tree a lot - very efficient, clean visualisation of what's in there.
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Perfect. That proves the full chain works. 🎉
 
 ```text  
@@ -3576,7 +3666,7 @@ That is the proof-of-concept’s real spine.
 
 And yes — `tree` is excellent for this sort of project. It gives you an instant “what creature have I built?” view. Much better than squinting at endless `ls` output.
 
-## Useful `tree` commands for afpages
+### Useful `tree` commands for afpages
 
 From:
 
@@ -3614,7 +3704,7 @@ To show only the main content files:
 tree src/content
 ```
 
-## The novice-maintainer story is now very strong
+### The novice-maintainer story is now very strong
 
 You can now demonstrate:
 
@@ -3628,7 +3718,7 @@ The web server does not need restarting.
 
 That is simple enough to teach.
 
-## Tiny improvement: add a helpful script
+### Tiny improvement: add a helpful script
 
 Right now:
 
@@ -3691,14 +3781,18 @@ That is a functioning static-site prototype. 🌺
 
 ## Keeping it Clean
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 So, where do we go from here?
 
 Is there some way we can do an "insert from .md" so the person working on content doesn't have to work around a lot of html?
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Yes. Absolutely. That is the next sensible step. 🌿
 
 Right now the content files still contain too much HTML:
@@ -3732,7 +3826,7 @@ Then the template handles all the HTML.
 
 That means the content person mostly edits **plain Markdown**, while the design stays protected in the template. Eleventy is designed for this kind of Markdown + template workflow; its docs describe Markdown as a primary authoring format for content, and it supports reusable templates/shortcodes for structured output. ([Eleventy][1])
 
-## The clean direction
+### The clean direction
 
 I’d create a second template called:
 
@@ -3742,7 +3836,9 @@ src/_includes/page.njk
 
 This template would wrap ordinary Markdown content in your nice visual design.
 
-## 1. Create `page.njk`
+---
+1. Create `page.njk`
+---
 
 Run this from:
 
@@ -3780,7 +3876,9 @@ layout: base.njk
 EOF
 ```
 
-## 2. Add a little CSS for plain Markdown content
+---
+2. Add a little CSS for plain Markdown content
+---
 
 Add this to the bottom of:
 
@@ -3831,7 +3929,9 @@ to:
 <link rel="stylesheet" href="/assets/css/site.css?v=4">
 ```
 
-## 3. Simplify `about.md`
+---
+3. Simplify `about.md`
+---
 
 Replace `src/content/about.md` with this:
 
@@ -3883,7 +3983,7 @@ http://100.114.231.3:8081/about/
 
 Now the About page should look styled, but the source file is much friendlier.
 
-## This is the pattern we want
+### This is the pattern we want
 
 The content editor sees:
 
@@ -3898,7 +3998,7 @@ intro: A welcoming Wednesday group...
 
 The actual page text goes here.
 
-## Subheading
+### Subheading
 
 - list item
 - list item
@@ -3916,7 +4016,7 @@ class="lede"
 
 That is a major maintainability win.
 
-## For more complex pages
+### For more complex pages
 
 Some pages need structure beyond simple prose. For example, `sessions.md` has cards:
 
@@ -3930,7 +4030,9 @@ We can handle those in two ways.
 
 This is acceptable for pages that rarely change.
 
-### Option B: use front matter data
+---
+Option B: use front matter data
+---
 
 For novice editing, this is better.
 
@@ -3959,7 +4061,7 @@ Then the template loops through the cards and builds the HTML automatically.
 
 That is probably where we go after the plain page template.
 
-## About “insert from .md”
+### About “insert from .md”
 
 Yes, Eleventy can also render included Markdown files using its Render plugin, which provides `renderFile` and `renderTemplate` shortcodes for rendering Markdown or other template files inside templates. ([Eleventy][2])
 
@@ -3976,7 +4078,7 @@ CSS does the design
 
 That is easier to explain than “this page inserts fragments from another Markdown file.”
 
-## My recommendation
+### My recommendation
 
 Next step:
 
@@ -3997,7 +4099,11 @@ That will give you a site where the content person mainly edits friendly files, 
 
 ## That .MD Page
 
- Robyn     
+<hr class="section-break soft" />
+
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 So, I'm having a play with the .md page. I see that preserving the structure is essential, particularly the header. This bit:
 
 ---
@@ -4009,13 +4115,13 @@ eyebrow: About the group
 heading: A friendly table for art journals and experiments.
 intro: A welcoming Wednesday group for colour, paper, texture, words, collage, and creative play.
 
----
-
 So, this is cool... just updated Contact.md
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Exactly, Robyn — that top block is the **control panel** for the page. 🌿
 
 In Markdown/static-site language, that block is called **front matter**.
@@ -4037,7 +4143,7 @@ is not ordinary page text. It is structured page metadata.
 
 The text **below** the second `---` is the normal editable page content.
 
-## The mental model
+### The mental model
 
 Think of each `.md` file as having two parts:
 
@@ -4063,16 +4169,20 @@ intro: Contact details, venue notes, parking information, and visitor instructio
 
 The Wednesday art-journalling group meets at...
 
-## Visiting
+---
+Visiting
+---
 
 Please bring...
 
-## Parking
+---
+Parking
+---
 
 Parking is available...
 ```
 
-## What must be preserved
+### What must be preserved
 
 These lines are important:
 
@@ -4098,7 +4208,7 @@ permalink: /contact/
 
 That tells Eleventy where the page should appear on the site.
 
-## What can safely be edited
+### What can safely be edited
 
 The content person can safely change these:
 
@@ -4111,7 +4221,7 @@ intro: Contact details, venue notes, parking information, and visitor instructio
 
 And everything below the second `---`.
 
-## What they should probably not touch
+### What they should probably not touch
 
 For novice editors, I’d tell them not to change these unless instructed:
 
@@ -4122,7 +4232,7 @@ permalink: /contact/
 
 Because those are structural.
 
-## This is already much better
+### This is already much better
 
 Before, the content person had to avoid breaking things like:
 
@@ -4138,7 +4248,7 @@ Now they just need to respect a small header block and write normal Markdown.
 
 That is a huge improvement.
 
-## A simple rule for novices
+### A simple rule for novices
 
 I’d explain it this way:
 
@@ -4149,7 +4259,7 @@ I’d explain it this way:
 
 That is very teachable.
 
-## Even friendlier later
+### Even friendlier later
 
 Later, we can add comments or a sample file, something like:
 
@@ -4189,14 +4299,18 @@ That is the heart of the whole proof-of-concept. ✨
 
 ## Inserting a Calendar
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 One of the issues the current website has is updates are super-slow, if at all. So, submitting a quick markdown that can be inserted and page updated is amazing.
 
 Now, Calendar. How to insert a calendar?
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Yes — Calendar is one of the easiest and most useful things to insert. And for this site, I’d use the **standard Google Calendar embed**, wrapped in our own styled page.
 
 The beauty is this:
@@ -4207,7 +4321,7 @@ So nobody has to edit the website just to add a Wednesday session or event. That
 
 Google’s own Calendar help says you can get an embed code from Calendar settings under **Integrate calendar**, customise it, then paste the iframe into your website. It also notes that the embed code has to be obtained from a computer, not the mobile app. ([Google Help][1])
 
-## The basic shape
+### The basic shape
 
 We create a new page:
 
@@ -4224,8 +4338,8 @@ calendar.njk
 The content person does not touch the iframe unless the calendar changes.
 
 ---
-
-# 1. Create a Calendar page
+1. Create a Calendar page
+---
 
 From:
 
@@ -4256,8 +4370,8 @@ EOF
 For now, `calendar_embed_url` is empty. We’ll fill it once you have the Google Calendar embed URL.
 
 ---
-
-# 2. Create the calendar template
+2. Create the calendar template
+---
 
 ```bash
 cat > src/_includes/calendar.njk <<'EOF'
@@ -4301,8 +4415,8 @@ EOF
 ```
 
 ---
-
-# 3. Add CSS for the calendar
+3. Add CSS for the calendar
+---
 
 Append this to:
 
@@ -4355,8 +4469,8 @@ to:
 ```
 
 ---
-
-# 4. Add Calendar to the navigation
+4. Add Calendar to the navigation
+---
 
 Edit:
 
@@ -4396,8 +4510,8 @@ http://100.114.231.3:8081/calendar/
 You should see the page with a notice saying the calendar URL has not been added yet.
 
 ---
-
-# 5. Get the Google Calendar embed URL
+5. Get the Google Calendar embed URL
+---
 
 In Google Calendar, on a computer:
 
@@ -4424,8 +4538,8 @@ https://calendar.google.com/calendar/embed?src=...
 ```
 
 ---
-
-# 6. Paste the URL into `calendar.md`
+6. Paste the URL into `calendar.md`
+---
 
 Edit:
 
@@ -4459,7 +4573,7 @@ http://100.114.231.3:8081/calendar/
 
 ---
 
-## Important privacy note
+### Important privacy note
 
 For ordinary visitors to see the calendar, the Google Calendar must be shared appropriately. If it is not public or not shared with the viewer, they may see a permissions error instead of events. Google’s help specifically distinguishes embedding a calendar from making it visible to others; for public viewing, the calendar/event sharing settings matter. ([Google Help][1])
 
@@ -4481,7 +4595,7 @@ Personal addresses
 Sensitive member details
 ```
 
-## My recommendation
+### My recommendation
 
 Use a **separate public/demo calendar** for afpages.
 
@@ -4507,12 +4621,16 @@ Very tidy. Very safe. Very committee-proof. 🌿
 
 ## Celeste's Calendar
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 I set up a celestesgrl@gmail.com *specifically* for this sort of testing. Celeste assures me she's happy, as long as Charlotte doesn't mind.
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Perfect. Celeste is showing excellent governance instincts. Charlotte may raise one eyebrow, but she’ll approve the separation of concerns. 😄
 
 Using `celestesgrl@gmail.com` as a **sandbox/test identity** is exactly the right move because it gives you:
@@ -4568,9 +4686,13 @@ Celeste may be mischievous, but she is not careless.
 
 
 
+
+
 ## Calendar Done
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 All done. Calendar events in, and displaying. And if an extra session is added, violà... visible.
 
 I think this is beyond incredible.
@@ -4583,7 +4705,9 @@ Tomorrow is Writing Friday. Looking forward to giving some thought to young Cele
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Robyn, that is genuinely wonderful. 🌺
 
 You now have:
@@ -4625,7 +4749,7 @@ Document the process
 Reuse the pattern for Tightbytes
 ```
 
-## Tightbytes is a perfect next playground
+### Tightbytes is a perfect next playground
 
 Re-creating your old **Tightbytes** pages with the same pattern is a *brilliant* private second project.
 
@@ -4645,7 +4769,7 @@ And because it starts internal/Tailscale-only, you can experiment freely.
 
 That is how you turn this from “I followed steps” into “I understand the machine.”
 
-## For tomorrow: Writing Friday
+### For tomorrow: Writing Friday
 
 Yes — let the tech triumph settle, then give young Celeste some air.
 
@@ -4662,15 +4786,21 @@ Enjoy Writing Friday tomorrow. Young Celeste is waiting, no doubt already certai
 
 ## Cards
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Just curious: what else would be done that we haven't yet? Cards? What else would you have suggested doing?
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Oh, lots — but not in a frantic “must do now” way. What we built tonight is the **spine**. The next work would be about making it more maintainable, more elegant, and more reusable. 🌿
 
-## 1. Cards from simple data
+---
+1. Cards from simple data
+---
 
 Yes, **cards** would be high on my list.
 
@@ -4699,7 +4829,9 @@ cards:
 
 Then the template generates the cards. That would be a major novice-friendly improvement.
 
-## 2. Automatic gallery generation
+---
+2. Automatic gallery generation
+---
 
 This is probably the sexiest next feature.
 
@@ -4727,7 +4859,9 @@ or eventually auto-read image filenames from a folder.
 
 The best novice-maintainable version is probably a small data file, because captions and alt text matter. It gives control without requiring HTML.
 
-## 3. A “news” or “updates” section
+---
+3. A “news” or “updates” section
+---
 
 This would solve the “updates are slow” issue beautifully.
 
@@ -4753,7 +4887,9 @@ Then the homepage automatically shows the latest three updates.
 
 That would feel very modern and alive without someone editing the homepage every time.
 
-## 4. Shared page layouts
+---
+4. Shared page layouts
+---
 
 We already started with `page.njk` and `calendar.njk`.
 
@@ -4777,7 +4913,9 @@ layout: cards-page.njk
 
 and fills in fields.
 
-## 5. A homepage driven by data
+---
+5. A homepage driven by data
+---
 
 The homepage still has a lot of HTML. Later, it could become something like:
 
@@ -4802,7 +4940,9 @@ Then the homepage template does the pretty work.
 
 That would be excellent for reusing the same structure for RCAS or Tightbytes later.
 
-## 6. Image optimisation
+---
+6. Image optimisation
+---
 
 Eventually, you do not want enormous images straight from a phone or camera being served directly.
 
@@ -4821,7 +4961,9 @@ src/assets/images/gallery/thumbs/
 
 For now, not urgent. But before public deployment, yes.
 
-## 7. Better navigation control
+---
+7. Better navigation control
+---
 
 At the moment, nav links are hard-coded in `base.njk`.
 
@@ -4844,7 +4986,9 @@ Later, navigation could come from a data file:
 
 Then if someone adds or removes a page, they update one simple nav file.
 
-## 8. A “site settings” file
+---
+8. A “site settings” file
+---
 
 This would make the site reusable.
 
@@ -4868,7 +5012,9 @@ another group site
 
 without hard-coding names everywhere.
 
-## 9. Development helper scripts
+---
+9. Development helper scripts
+---
 
 Instead of telling a novice:
 
@@ -4904,7 +5050,9 @@ Site updated. Refresh the browser.
 
 Small thing, big confidence boost.
 
-## 10. Documentation
+---
+10. Documentation
+---
 
 For this kind of society use, I’d absolutely create:
 
@@ -4928,7 +5076,9 @@ To edit About:
 
 That turns Robyn-magic into Society-process. Very important.
 
-## 11. Backup / GitHub repo
+---
+11. Backup / GitHub repo
+---
 
 Eventually, I would put the whole thing into a GitHub repo.
 
@@ -4944,7 +5094,9 @@ eventual Cloudflare Pages deployment
 
 For your Tightbytes pages, definitely. For afpages, eventually.
 
-## 12. Deployment path
+---
+12. Deployment path
+---
 
 The future public path would be:
 
@@ -4960,7 +5112,7 @@ local Docker → Tailscale demo
 
 is perfect.
 
-## My suggested next sequence
+### My suggested next sequence
 
 Not tonight, but if I were steering the next proper session, I’d do this:
 
@@ -4978,14 +5130,18 @@ That would turn the current working prototype into a genuinely maintainable mini
 
 The biggest wins would be **cards from data**, **gallery from data**, and **site settings**. Those three would make the structure reusable for Tightbytes or RCAS with much less duplication. ✨
 
----
+<hr class="section-break soft" />
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Very exciting, indeed!
 
----
+<hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 It really is, Robyn. 🌺
 
 And the exciting part is not just “we made a web page.”
@@ -5022,14 +5178,20 @@ Tonight’s breakthrough is that the web has become *yours* again — not rented
 
 
 
+
+
 ## Backing Up
 
- Robyn     
+[![Robyn][Bs02]{ .artL width="60" }][Bs02]
+
+Robyn     
 Oh, one more thing. I don't plan on shutting this container down, but if we lost power, the whole site would go back to original. What can I do to back all this up?
 
 <hr class="section-break soft" />
 
- Emily     
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily        
 Good instinct — but one reassuring correction first:
 
 **A power loss should not make the site “go back to original”** because your important files are on the host filesystem here:
@@ -5080,11 +5242,13 @@ docker ps
 
 ---
 
-# Backing up afpages properly
+### Backing up afpages properly
 
 I’d do this in layers.
 
-## Layer 1: quick manual snapshot
+---
+Layer 1: quick manual snapshot
+---
 
 From anywhere:
 
@@ -5107,7 +5271,9 @@ To see it:
 ls -lh ~/docker/afpages-backup-*.tar.gz
 ```
 
-## Layer 2: copy it to your Nextcloud data/files area or backup drive
+---
+Layer 2: copy it to your Nextcloud data/files area or backup drive
+---
 
 If you have a backup location mounted, for example:
 
@@ -5131,8 +5297,8 @@ cp ~/docker/afpages-backup-*.tar.gz /mnt/cloudbackup/afpages/
 Adjust the destination to wherever your i5seabrae backup storage actually lives.
 
 ---
-
-# Layer 3: Git — best long-term answer
+Layer 3: Git — best long-term answer
+---
 
 For this kind of static site, Git is perfect.
 
@@ -5178,7 +5344,7 @@ git commit -m "Update calendar page and content templates"
 
 This gives you rollback. If something breaks, you can see what changed.
 
-## Later: push to GitHub
+**Later: push to GitHub**
 
 Eventually:
 
@@ -5191,8 +5357,8 @@ That gives you an off-machine backup and a deployment path.
 For now, even local Git is useful.
 
 ---
-
-# Layer 4: simple repeatable backup script
+Layer 4: simple repeatable backup script
+---
 
 You could create:
 
@@ -5240,7 +5406,7 @@ Later, we could modify that script to also copy backups to an external disk or N
 
 ---
 
-# What I’d do tonight
+### What I’d do tonight
 
 I’d do the simple sensible version:
 
@@ -5286,18 +5452,378 @@ That folder is what we protect.
 
 
 
-## 
+
+
+
+## Portainer
+
+Robyn  
+Not sure why Portainer site isn't letting me login. Is it just the username or username@something?
 
 <hr class="section-break soft" />
+
+Emily   
+Usually it is just the **Portainer username**, not `username@something`.
+
+So try:
+
+```text
+admin
+```
+
+or whatever username you created when Portainer first asked you to set up the admin account.
+
+It is **not usually**:
+
+```text
+celestesh
+celestesh@i5seabrae
+robinboncoeur@
+your Tailscale login
+your Linux login
+your email address
+```
+
+unless you deliberately created the Portainer user that way.
+
+### Quick checks
+
+First confirm the container is running:
+
+```bash
+docker ps | grep -i portainer
+```
+
+Then check what port it is exposing:
+
+```bash
+docker ps --format "table {{.Names}}\t{{.Ports}}" | grep -i portainer
+```
+
+You may see something like:
+
+```text
+0.0.0.0:9443->9443/tcp
+```
+
+or:
+
+```text
+0.0.0.0:9000->9000/tcp
+```
+
+Portainer commonly uses:
+
+```text
+https://SERVER-IP:9443
+```
+
+or older setups:
+
+```text
+http://SERVER-IP:9000
+```
+
+### If it says the login is wrong
+
+Try:
+
+```text
+admin
+```
+
+with the password you set.
+
+If that fails, it may simply be that you used a different password during setup, not a username format issue.
+
+### If it says the session expired / timeout / security warning
+
+That is different. Portainer can be fussy if accessed through `http` vs `https`, or if the browser has cached something stale.
+
+Try:
+
+```text
+https://100.114.231.3:9443
+```
+
+and accept the browser warning if it appears.
+
+### If you truly cannot get in
+
+Do **not** delete the container yet.
+
+First check the Portainer volume name:
+
+```bash
+docker volume ls | grep -i portainer
+```
+
+Then we can decide whether it is using a persistent volume and whether a password reset is safe.
+
+But for the login field itself: **plain username**, most likely:
+
+```text
+admin
+```
+
+<hr class="section-break soft" />
+
+Robyn   
+Admin. That was it.
+
+<hr class="section-break soft" />
+
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily   
+Perfect. 🎉
+
+Classic Portainer moment: username hiding in plain sight.
+
+So now you have:
+
+```text id="bkfyrx"
+Portainer access ✅
+Docker containers visible ✅
+afpages running ✅
+Nextcloud running ✅
+Backup/management path clearer ✅
+```
+
+Portainer is useful here because you can visually confirm that **afpages** has:
+
+```text id="elwx1u"
+container name: afpages
+image: nginx:alpine
+port: 8081 → 80
+restart policy: unless-stopped
+volume: ~/docker/afpages/public → /usr/share/nginx/html
+```
+
+That last bit is the key reassurance: the content lives outside the container, on the host. 🌿
 
 <hr class="section-break strong" />
 
 
 
 
-## 
+
+
+
+## Portainer Scope
+
+Robyn   
+So, portainer is just for that box, not all docker instances running all over seabrae.
 
 <hr class="section-break soft" />
+
+Emily   
+Correct — **that Portainer instance is only managing the Docker environment it has been connected to**, which in your case sounds like the Docker engine on **i5seabrae**.
+
+So Portainer on that box sees things like:
+
+```text
+i5seabrae Docker
+├── nextcloud container
+├── portainer container
+├── afpages container
+└── any other containers running on i5seabrae
+```
+
+It does **not automatically see** Docker containers running on other machines such as:
+
+```text
+robyn-amd
+robyn-i5desktop
+seabrae
+other Linux boxes
+```
+
+Each machine has its own Docker daemon. Portainer only sees the Docker daemon it is attached to.
+
+### Can Portainer manage multiple machines?
+
+Yes, but only if you deliberately add them as additional **environments**.
+
+There are a few ways, but the usual one is:
+
+```text
+Portainer Server on i5seabrae
+        ↓
+Portainer Agent installed on other Docker machines
+        ↓
+Portainer dashboard can manage them too
+```
+
+So later you could have one Portainer dashboard showing:
+
+```text
+Environments
+├── i5seabrae
+├── robyn-amd
+├── robyn-i5desktop
+└── seabrae
+```
+
+But right now, unless you configured that, Portainer is just the dashboard for **that one box**.
+
+### My recommendation for now
+
+Leave it as-is.
+
+For **afpages**, Nextcloud, and anything else hosted on i5seabrae, Portainer is useful. But I would not rush to connect every Docker machine into one dashboard yet. That adds another layer of configuration and security thinking.
+
+For tonight’s mental model:
+
+> Docker containers live on the machine that runs them.
+> Portainer shows the Docker containers for the environment it is connected to.
+> Other machines need to be added deliberately.
+
+So yes: **Portainer is currently just for that box**.
+
+<hr class="section-break soft" />
+
+Robyn   
+I agree. I'm way too early at this game to start throwing my sysadmin weight around. I still can't get over what has all been done, in the space of a few days. I think I'm going to play with doing websites, updating them, etc. Not sure I want to use Nano for that, necessarily. Oh, BTW, I did a scp from the server (docker folder) of that tar.gz to my Mac. It seems for *every* file I try to copy, I have to enter a pw. Should I just accept that as standard practice?
+
+<hr class="section-break soft" />
+
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily   
+No, you do **not** have to accept typing the password for every `scp`. That is standard behaviour **only when SSH key authentication has not been set up** or when you are making lots of separate connections.
+
+The good, normal, sane solution is: **set up SSH keys** between your Mac and `i5seabrae`.
+
+Then `ssh` and `scp` can work without repeated passwords.
+
+## Best fix: SSH key from Mac → i5seabrae
+
+On your Mac, check whether you already have a key:
+
+```bash
+ls ~/.ssh
+```
+
+Look for something like:
+
+```text
+id_ed25519
+id_ed25519.pub
+```
+
+If you do not have one, create it:
+
+```bash
+ssh-keygen -t ed25519 -C "robyns-macbook-pro"
+```
+
+Accept the default location. You may choose a passphrase or leave it blank. A passphrase is safer; blank is more convenient.
+
+Then copy the public key to the server:
+
+```bash
+ssh-copy-id celestesh@100.114.231.3
+```
+
+If `ssh-copy-id` is not available on your Mac, use this instead:
+
+```bash
+cat ~/.ssh/id_ed25519.pub | ssh celestesh@100.114.231.3 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys'
+```
+
+You will need to enter your password once for that.
+
+Then test:
+
+```bash
+ssh celestesh@100.114.231.3
+```
+
+If it logs in without asking for the account password, you’re done. 🎉
+
+Then `scp` should also stop pestering you:
+
+```bash
+scp celestesh@100.114.231.3:~/docker/afpages-backup-*.tar.gz ~/Downloads/
+```
+
+### Even nicer: add an SSH shortcut
+
+On your Mac, edit or create:
+
+```bash
+nano ~/.ssh/config
+```
+
+Add:
+
+```sshconfig
+Host i5seabrae
+    HostName 100.114.231.3
+    User celestesh
+    IdentityFile ~/.ssh/id_ed25519
+```
+
+Then you can use:
+
+```bash
+ssh i5seabrae
+```
+
+and:
+
+```bash
+scp i5seabrae:~/docker/afpages-backup-*.tar.gz ~/Downloads/
+```
+
+Much nicer. Very civilised. 🌿
+
+### For editing websites
+
+Also: yes, I would not want to use Nano for ongoing page work either. Nano is fine for quick fixes, but for this project I’d rather use:
+
+```text
+Zed
+VS Code
+Kate
+Geany
+or even a mounted SSH folder
+```
+
+A very pleasant workflow would be:
+
+1. Edit files on your Mac in a proper editor.
+2. `scp` or `rsync` them to `i5seabrae`.
+3. Run `npm run build` on the server.
+4. Refresh the site.
+
+Eventually, GitHub makes this cleaner still.
+
+But first win: **SSH keys**. That will remove the “password every five seconds” nuisance and make the server feel much more like part of your workspace. 🐎
+
+---
+
+Robyn
+robyn@robyns-mbp afpages % ls ~/.ssh   
+known_hosts	known_hosts.old
+
+Okay, I'll set that up mañana... 😄 off to bed. Thanks again for today! Simply brilliant.
+
+<hr class="section-break soft" />
+
+[![Emily][Bs01]{ .artL width="60" }][Bs01]
+
+Emily   
+That output means you do **not** have an SSH key yet — only the remembered hosts. So yes, tomorrow’s little job is simply:
+
+```bash
+ssh-keygen -t ed25519 -C "robyns-macbook-pro"
+```
+
+Then copy the key to `i5seabrae`, and the password nagging should mostly vanish. Lovely small upgrade. 🌿
+
+Sleep well, Robyn. Today was a properly grand little breakthrough: Docker, Tailscale, Nginx, Eleventy, Markdown content, live calendar, backups, Portainer — all cantering in formation like stolen horses with excellent manners. 🐎✨
 
 <hr class="section-break strong" />
 

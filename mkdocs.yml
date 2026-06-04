@@ -45,7 +45,8 @@ nav:
       - work/index.md
       - De-Cluttered Home: work/DClutter.md
       - Debugging WebPage: work/dbugPage.md
-      - Website in Docker: work/dkrPages.md
+      - Static Website Dkr: work/dkrPage1.md
+      - SQLite Website Dkr: work/dkrPage2.md
 
 not_in_nav: |
   emily/2023/**
