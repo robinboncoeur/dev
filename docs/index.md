@@ -119,7 +119,7 @@ Read generously, *but not carelessly*.
 
 <!--  Image references  -->
 
-[Br01]: assets/images/offsite/Bnr01Wait.jpg
+[Br01]: assets/images/base/bnrwait.jpg
 [St01]: assets/images/offsite/01aRead.jpg
 [Nu01]: https://media.seabrae.org/images/e/Qaio001.jpg
 [Nu02]: https://media.seabrae.org/images/e/Qnu001.jpg

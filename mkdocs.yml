@@ -43,8 +43,9 @@ nav:
 
   - Work:
       - work/index.md
-      - De-Clutter: work/DClutter.md
-      - Debug Site: work/debugsite.md
+      - De-Cluttered Home: work/DClutter.md
+      - Debugging a Site: work/debugsite.md
+      - Website in Docker: work/websiteD.md
 
 not_in_nav: |
   emily/2023/**
