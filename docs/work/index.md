@@ -1,4 +1,11 @@
-# Celeste's Girl
+# Mind Mill
+
+
+[![Not The Product][Br01]{ .artC width="1100" }][Br01]
+
+
+
+<hr class="section-break strong" />
 
 
 
@@ -9,17 +16,19 @@
 
 
 
+## 🌿 Background 🌿
 
-## 🌿 Preface 🌿
 
+[![Read][St01]{ .artR width="220" }][St01]
 
-### Background
 
 I write character-driven fiction about gender, power, belonging, and the women who build the rooms other people survive in. 
 
 I’m not formally published in the traditional sense, and I’ve had AI as a drafting partner, but I’ve been working seriously on a long fiction project about gender, belonging, and women’s authority and agency. 
 
 I’m still learning, but I care about the craft.
+
+<hr class="section-break soft" />
 
 
 
@@ -45,3 +54,24 @@ Celeste’s Girl is my love letter to women’s work, to chosen family, and to t
 “No. Not here. Not to her.”
 
 It’s also a quiet insistence that trans women are not an enemy camp, but some of the keenest, most motivated allies women will ever have in dismantling the structures that harm us all.
+
+
+
+
+<!--  Image references  -->
+
+[Br01]: ../assets/images/base/bnrmissy.png
+[St01]: ../assets/images/offsite/01aRead.jpg
+[Nu01]: https://media.seabrae.org/images/e/Qaio001.jpg
+[Nu02]: https://media.seabrae.org/images/e/Qnu001.jpg
+
+
+<!--
+
+✈️ 🕊️ 🌫️ 🌿 🌷 🪜 ☕ 🧠 💻 ꧁ 🪷 🌷 🌸 🌺 🦩 ꧂ 🧺 🔐 💼 💻 💎 🩱 🥻✂ 🩸 💧— — … …
+
+😄 🧵 💛 👭 💞 🖤 🍓 🌶 🚪 🔑 🛋 🫧 🌩 🌧 🧵 🪡 👗 👚 👜 👠 🩰 💄 💋 🎻 📒  🚺  — —
+
+/-->
+
+<hr class="section-break strong" />
